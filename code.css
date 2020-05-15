@@ -1,0 +1,25 @@
+.code {
+    border: 2px solid var(--c-b1);
+    border-radius: var(--rad);
+    color: var(--c);
+    position: relative;
+}
+  
+.code::before {
+    color: vaR(--c-b1);
+    content: attr(data-lang);
+    font-size: 1.15rem;
+    position: absolute;
+    font-weight: bold;
+    right: .4rem;
+    top: .1rem;
+}
+  
+.code > code {
+    color: inherit;
+    display: block;
+    line-height: 1.5;
+    overflow-x: auto;
+    padding: 0 1rem;
+    width: 100%;
+}

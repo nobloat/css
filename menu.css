@@ -1,0 +1,28 @@
+
+.menu > :not(:first-child) {
+    margin: .75rem .25rem;
+    border-radius: var(--rad);
+}
+
+.menu > *:hover {
+    filter: brightness(110%);
+}
+
+.menu:hover > :not(:first-child) {
+    display: block;
+}
+
+.menu > :first-child::after {
+    content: ' ▾';
+    font-size: 1.2rem;
+}
+
+.menu > :not(:first-child) {
+    display: none;
+}
+
+.menu:hover {
+    background: linear-gradient(180deg, rgba(223,223,223,0.8) 0%, var(--c-b2) 15%, var(--c-b1) 78%);
+    box-shadow: var(--sh);
+    border-radius: var(--rad);
+}

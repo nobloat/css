@@ -1,0 +1,23 @@
+ul.bread {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+}
+
+ul.bread > li {
+    padding: .2rem;
+    font-size: 1rem;
+    padding-top: .5rem;
+    text-align: right;
+    float: right;
+    filter: contrast(70%);
+    cursor: pointer;
+}
+
+ul.bread > li:not(.active) > a {
+    color: var(--c-f1);
+}
+
+ul.bread > :not(:last-child)::after {
+    content: ' / ';
+}

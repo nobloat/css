@@ -1,0 +1,10 @@
+kbd {
+    background-color: var(--c-b1);
+    font-size: 1.2rem;
+    margin: .7rem;
+    padding: .2rem .6rem;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    box-shadow: 4px 3px 7px 0px #777;
+    cursor: pointer;
+}

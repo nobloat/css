@@ -1,0 +1,53 @@
+:root {
+    --c-err: #e85500;
+    --c-err-hover: #fa9a62;
+    --c-wrg: #ffb700;
+    --c-wrg-hover: #ffe8ae;
+    --c-ok: #32b643;
+    --c-ok-hover: #93e59e;
+
+    --c-f1: #303742;
+    --c-f2: #66758c;
+    --c-b1: #d8d7d7;
+    --c-b2: #f7f8f9;
+    --c-1: #8fb53c;
+    --c-2: #652b91;
+    --sh: 0 .25rem 1rem rgba(48,55,66,.15);
+
+    --c-bg: var(--c-b2);
+    --c-h: var(--c-2);
+    --c-a: var(--c-2);
+}
+
+.wrg, .err, .ok, .color-1, .color-2 {
+    color: #fff;
+}
+
+.wrg {
+    background-color: var(--c-wrg);
+    border-color: var(--c-wrg);
+}
+
+.ok {
+    background-color: var(--c-ok);
+    border-color: var(--c-ok);
+}
+
+.err {
+    background-color: var(--c-err);
+    border-color: var(--c-err);
+}
+
+.color-1 {
+    background-color: var(--c-1);
+    border-color: var(--c-1);
+}
+
+.color-2 {
+    background-color: var(--c-2);
+    border-color: var(--c-2);
+}
+
+.color-default {
+    background-color: var(--c-b1);
+}

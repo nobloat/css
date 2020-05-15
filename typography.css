@@ -1,0 +1,55 @@
+h1 {
+    font-size: 3rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 350;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  letter-spacing: .17rem;
+  color: var(--c-h);
+}
+p {
+    margin-bottom: 1.5rem;
+}
+
+blockquote {
+    border-left: 0.15rem solid var(--c-b1);
+    color: var(--c-f2);
+    padding: .5rem .75rem;
+    margin: 0;
+    font-style: italic;
+}
+
+a {
+    color: var(--c-a);
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: var(--c-a-hover)
+}
+
+ul,ol {
+    margin: .5rem;
+    padding: 0;
+    list-style-position: inside;
+}
+
+li {
+    margin-top: .4rem;
+}
+
+hr {
+    border-radius: 1rem;
+    border: .01rem solid var(--c-f2);
+    margin: .25rem;
+}
+
+.meta {
+    font-size: 1rem;
+    padding-top: .5rem;
+    text-align: right;
+    float: right;
+    filter: contrast(70%);
+}

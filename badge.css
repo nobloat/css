@@ -1,0 +1,25 @@
+.badge {
+    position: relative;
+    white-space: nowrap;
+}
+
+.badge::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(45%,-75%);
+    font-size: .8rem;
+    line-height: 1;
+    font-weight: bold;
+    min-width: 1.5rem;
+    min-height: 1.2rem;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    white-space: nowrap;
+    content: attr(data-badge);
+    border-radius: 3rem;
+    box-shadow: var(--sh);
+    display: inline-block;
+    background-color: inherit;
+    z-index: 2;
+}

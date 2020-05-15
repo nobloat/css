@@ -1,0 +1,8 @@
+.label {
+    background-color: var(--c-b1);
+    font-size: .8rem;
+    white-space: nowrap;
+    line-height: 2rem;
+    padding: .4rem .6rem;
+    border-radius: var(--rad);
+}

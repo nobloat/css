@@ -1,0 +1,70 @@
+form, fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+    display: flex;
+    flex-flow: column;
+}
+
+fieldset * {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+.stack {
+    margin: 0;  
+}
+
+button.stack {
+    width: 100%;
+    border-radius: 0;    
+}
+
+fieldset>label, fieldset>section>label, fieldset>input:not([type=checkbox]):not([type=radio]), fieldset>textarea, fieldset>select {
+    margin-bottom: 1rem;
+    box-shadow: var(--sh);
+    width: 100%;
+}
+
+input:not([type=checkbox]):not([type = radio]):hover, textarea:hover, select:hover {
+    border: 2px solid var(--c-1, var(--c-f1));
+}
+
+input:not([type=checkbox]):not([type=radio]):focus, textarea:focus, select:focus {
+    border: 2px solid var(--c-2, var(--c-f1));
+}
+
+input:invalid {
+    border: 2px solid var(--c-err, var(--c-f1));
+}
+
+label>span {
+    background-color: var(--c-b1);
+    padding: .4rem 1rem;
+    flex: 3 3 5;
+    
+}
+
+textarea, select, input:not([type=checkbox]):not([type=radio]) {
+    font-size: 80%;
+    flex: 4;
+    padding: .4rem 1rem;
+    color: var(--c-f1);
+    font-family: var(--font-family);
+    border: 2px solid transparent;
+    background-color: var(--c-b2);
+}
+
+textarea {
+    min-height: 6.5rem;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin-right: .5rem;
+    background-color: var(--c-b1);
+}
+
+fieldset>span>*:not(:last-child):not(:only-child) {
+    margin-right: 1rem;
+}

@@ -1,0 +1,40 @@
+button {
+    border-radius: var(--rad);
+    background-color: var(--c-b1);
+    color: var(--c-f1);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: .7rem 1rem;
+    text-align: center;
+    margin: 0.15rem;
+    border: 2px solid transparent;
+    box-shadow: var(--sh);
+}
+
+button > label {
+    margin: 0;
+    width: 100%;
+}
+
+button > * {
+    cursor: pointer;
+}
+
+button:hover {   
+    filter: brightness(120%);
+}
+
+span.button {
+    border-radius: var(--rad);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13.333px;
+    line-height: normal;
+    text-align: center;
+    margin: 0.15rem;
+    border: 2px solid transparent;
+    box-shadow: var(--sh);   
+    padding: .7rem;
+}

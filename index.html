@@ -1,0 +1,590 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+    <title>nobloat/css</title>   
+
+    <script>
+        var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);
+    </script>
+</head>
+<input id="dark-mode" class="dark-mode-checkbox" type="checkbox" hidden> 
+<header>
+    <a href="#">nobloat/css</a>
+    <label class="nav-button" for="nav-check"><hr><hr><hr></label>
+    <input type="checkbox" id="nav-check" hidden>
+    <nav>
+        <a href="#typography">Typography</a>
+           <div class="menu">
+                <a href="#">Components</a>
+                <hr>
+                <a href="#buttons">Buttons</a>
+                <a href="#labels">Labels</a>
+                <a href="#badges">Badges</a>
+                <hr>
+                <a href="#spinners">Spinners</a>
+                <a href="#alerts">Alerts</a>
+                <a href="#tooltips">Tooltips</a>
+                <hr>
+                <a href="#menus">Menus</a>
+            </div>
+            <a href="#modals">Modals</a>
+            <a href="#forms">Forms</a>
+            <a href="#tables">Tables</a>
+            <a href="#cards">Cards</a>
+            <a href="#grids">Responsive Layouts</a>
+            <label class="dark-mode-label" for="dark-mode"></label>
+    </nav>
+</header>
+
+<main>
+    <div class="toasts right bottom">
+        <div class="alert ok close">
+            <input type="checkbox" id="toast1"/>
+            <label for="toast1"></label>
+            <span>This is a okful autoclosable Toast after 5 seconds</span>
+        </div>
+
+        <div class="alert wrg close in-10">
+            <input type="checkbox" id="toast2"/>
+            <label for="toast2"></label>
+            <span>This is a okful autoclosable Toast after 10 seconds</span>
+        </div>
+    </div>
+<section>
+    <article>
+        <h1 id="typography">Typography</h1>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    
+        <h2>Quotes</h2>
+        <blockquote>
+            Wenn du zu den Nonkonformisten gehören willst, musst du dich anziehen wie wir und auf dieselbe Musik stehen wie wir!
+            <br><span class="meta">Goth Kids, South Park - S07E14~10:40</span>
+        </blockquote>
+
+        <h2>Meta</h2>
+        <span class="meta">Meta is smaller and right</span>
+    </article>
+    <article>
+        <h2>Code</h2>
+        <pre data-lang="Go" class="code">
+        <code>package main
+import "fmt"
+    
+func main() {
+    fmt.Println("hello world")
+}
+    </code></pre>
+        
+        <h2>hr</h2>
+        <hr>
+
+        <h2>Kbd</h2>
+
+        <kbd>Ctrl+S</kbd><kbd>Ctrl+C</kbd><kbd>Ctrl+V</kbd>
+
+        <h2>Lists</h2>
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+        </ul>
+        <h2>Pagination</h2>
+        <ul class="pages">
+            <li><a>Prev</a></li>
+            <li><a>1</a></li>
+            <li class="active"><a>2</a></li>
+            <li>...</li>
+            <li><a>99</a></li>
+            <li><a>Next</a></li>
+        </ul>
+
+        <h2>Bread crumbs</h2>
+        <ul class="bread">
+            <li><a>Main Section</a></li>
+            <li><a>Sub Section</a></li>
+            <li class="active"><a>Active Section</a></li>
+        </ul>
+    </article>
+
+    
+
+    <article>
+        <h1 id="buttons">Buttons</h1>
+        
+        <button>Default Button</button>
+        <button class="color-1">Color 1 Button</button>
+        <button class="color-2">Color 2 Button</button>
+        <br>
+        <button class="ok">ok Button</button>
+        <button class="wrg">wrg Button</button>
+        <button class="err">err Button</button>
+
+        <h1 id="labels">Labels</h1>
+
+        <span class="label">This is a default label</span>
+        <span class="label color-1">This is a colored label</span>
+        <span class="label color-2">This is a colored label</span>
+        <span class="label err">This is an err label</span>
+        <span class="label ok">This is a ok label</span>
+        <span class="label wrg">This is a warninig label</span>
+
+        
+        <h1 id="badges">Badges</h1>
+
+        <button>Button</button><span class="badge color-1" data-badge="30"></span>
+        <button>Button</button><span class="badge color-2" data-badge="3333"></span>
+        <button>Button</button><span class="badge err" data-badge="3"></span>
+        <br>
+        <ul>
+            <li>err badge<span class="badge err" data-badge="!!"></span></li>
+            <li>wrg badge<span class="badge wrg" data-badge="!"></span></li>
+            <li>Sucess badge<span class="badge ok" data-badge="✓"></span></li>
+            <li>Color 1 badge<span class="badge color-1" data-badge="C1"></span></li>
+            <li>Color 2 badge<span class="badge color-2" data-badge="C2"></span></li>
+            <li>Default badge<span class="badge color-default" data-badge="C2"></span></li>
+        </ul>
+
+        <h1 id="spinners">Spinners</h1>
+        <h2>Spinners small</h2>
+        <span class="spinner"></span>
+        <span class="spinner color-1"></span>
+        <span class="spinner color-2"></span>
+        <span class="spinner ok"></span>
+        <span class="spinner wrg"></span>
+        <span class="spinner err"></span>
+
+        <button><span class="spinner ok"></span> Button with Spinner</button>
+
+        <h2>Spinners Medium</h2>
+        <span class="spinner medium"></span>
+        <span class="spinner medium color-1"></span>
+        <span class="spinner medium color-2"></span>
+        <span class="spinner medium ok"></span>
+        <span class="spinner medium wrg"></span>
+        <span class="spinner medium err"></span>
+
+        <h2>Spinners large</h2>
+        <span class="spinner large"></span>
+        <span class="spinner large color-1"></span>
+        <span class="spinner large color-2"></span>
+        <span class="spinner large ok"></span>
+        <span class="spinner large wrg"></span>
+        <span class="spinner large err"></span>
+    </article>
+    <article>
+        <h1 id="alerts">Alerts</h1>
+        <div class="alert">
+            <input type="checkbox" id="alert1"/>
+            <label for="alert1"></label>
+            <span>Important message</span>
+        </div>
+    
+        <div class="alert ok">
+            <input type="checkbox" id="alert2"/>
+            <label for="alert2"></label>
+            <span>Important ok</span>
+        </div>
+        <div class="alert wrg">
+            <input type="checkbox" id="alert3"/>
+            <label for="alert3"></label>
+            <span>Important wrg</span>
+        </div>
+        <div class="alert err">
+            <input type="checkbox" id="alert4"/>
+            <label for="alert4"></label>
+            <span>Important err</span>
+        </div>
+        <div class="alert color-1">
+            <input type="checkbox" id="alert5"/>
+            <label for="alert5"></label>
+            <span>Important Mesasge with primary color</span>
+        </div>
+        <div class="alert color-2">
+            <input type="checkbox" id="alert6"/>
+            <label for="alert6"></label>
+            <span>Important Mesasge with secondary color</span>
+        </div>
+
+    
+
+        <h2 id="tooltips">Tooltips</h2>
+            <button class="tooltip-top" data-tooltip="This is the tip">Button with top tooltip</button>
+            <button class="tooltip-left" data-tooltip="This is the tip">Button with left tooltip</button>
+            <button class="tooltip-right" data-tooltip="This is the tip">Button with right tooltip</button>
+            <button class="tooltip-bottom" data-tooltip="This is the tip">Button with bottom tooltip</button>
+        <h2 id="modals">Modals</h2>
+        <label for="modal-1">
+            <span class="button ok">Open Modal</span>
+        </label>
+
+<div class="modal">
+    <input id="modal-1" type="checkbox" checked>
+    <div class="overlay">
+        <div class="content">
+            <h2>This is a modal</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+            <label for="modal-1" class="right"><span class="button err">Close Modal</span></label>
+        </div>    
+    </div>
+</div>
+    </article>
+
+    
+</section>
+
+
+<h1 id="forms">Forms</h1>
+<section class="three">
+    <article>
+        <form>
+            <fieldset>
+                <h2>Text-Input</h2>
+                <label><span>E-Mail</span><input type="email" placeholder="test@example.org"><span>After</span></label>
+                <label><span>Password</span><input type="password"></label>
+                <label><span>First name</span><input type="text"></label>
+                <label><input type="text"><span>Last name</span></label>
+                <section>
+                    <label><span>Street</span><input type="text"></label>
+                    <label><input type="text"><span>City</span></label>
+                </section> 
+                
+                <span>Simple text input</span>
+                <input type="text" placeholder="Example text input"> 
+                <span>Text area</span>
+                <textarea></textarea>
+            </fieldset>
+            <div>
+                <button type="submit" class="ok">Submit</button>
+                <button type="reset" class="err">Reset</button>
+            </div>
+        </form>
+    </article>
+    <article>
+        <form>
+            <fieldset>
+                <h2>Special input fields</h2>
+                <h3>File upload</h3>
+                <label>
+                    <span>File upload</span>
+                    <input type="file">
+                </label>
+                <h3>Date & Time</h3>
+                <section>
+                    <label>
+                        <span>Date input</span>
+                        <input type="date">
+                    </label>
+                    <label>
+                        <span>Time input</span>
+                        <input type="time">
+                    </label>
+                </section>
+                <h3>Range</h3>
+                <label>
+                    <span>Range</span>
+                    <input type="range" min="0" max="100">
+                </label>
+            </fieldset>
+        </form>
+        
+    </article>
+    <article>
+        <form>
+            <fieldset>
+                <h2>Select box</h2>
+                <label><span>Option</span><select><option>Option 1</option><option>Option 2</option></select></label>
+                <h3>Checkboxes</h3>
+                <span>
+                    <label><input type="checkbox">This is a checkbox</label>
+                    <label><input type="checkbox" checked>This is a pre-selected checkbox</label>
+                </span>
+                <h3>Radio buttons</h3>
+                <span>
+                    <label><input type="radio" name="radio1">Exclusive choice 1</label>
+                    <label><input type="radio" name="radio1" checked>Exclusive choice 2</label>
+                </span>
+
+                <h3>Vertical radio buttons</h3>
+                <span><label><input type="radio" name="radio2" checked >Another exclusive choice 1</label></span>
+                <span><label><input type="radio" name="radio2">Another exclusive choice 2</label></span>
+            </fieldset>
+        </form>
+        <h2>Example login-form</h2>
+        <form>
+            <fieldset>
+                <label class="stack"><span>@</span><input type="text"></label>
+                <label class="stack"><span>•••</span><input type="password"></label>
+            </fieldset>
+            <section class="stack"><button type="submit" class="stack ok">Login</button></section>
+        </form>
+    </article>
+</section>
+<h1 id="tables">Tables</h1>
+<section>
+    <article>
+        <h2>Default table</h2>
+        <table class="color-default">
+            <thead>
+                <tr>
+                    <th>Column A</th><th>Column B</th><th>Column C</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Data 1</td><td colspan="2">Data 2</td></tr>
+                <tr><td colspan="2">Data 1</td><td>Data 2</td></tr>
+                <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+            </tbody>
+            <tfoot>
+                <tr><td colspan="3">Summary of the table</td></tr>
+            </tfoot>
+        </table>
+    </article>
+    <article>
+        <h2>Color 1 Table</h2>
+        <table class="color-1">
+            <thead>
+                <tr>
+                    <th>Column A</th><th>Column B</th><th>Column C</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd"><td>Data 1</td><td colspan="2">Data 2</td></tr>
+                <tr><td colspan="2">Data 1</td><td>Data 2</td></tr>
+                <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+            </tbody>
+            <tfoot>
+                <tr><td colspan="3">Summary of the table</td></tr>
+            </tfoot>
+        </table>
+    </article>
+    <article>
+        <h2>Color 2 Table</h2>
+        <table class="color-2">
+            <thead>
+                <tr>
+                    <th>Column A</th><th>Column B</th><th>Column C</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd"><td>Data 1</td><td colspan="2">Data 2</td></tr>
+                <tr><td colspan="2">Data 1</td><td>Data 2</td></tr>
+                <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+            </tbody>
+            <tfoot>
+                <tr><td colspan="3">Summary of the table</td></tr>
+            </tfoot>
+        </table>
+    </article>
+</section>
+<section>
+    <article>
+        <h2>ok Table</h2>
+        <table class="ok">
+            <thead>
+                <tr>
+                    <th>Column A</th><th>Column B</th><th>Column C</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd"><td>Data 1</td><td colspan="2">Data 2</td></tr>
+                <tr><td colspan="2">Data 1</td><td>Data 2</td></tr>
+                <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+            </tbody>
+            <tfoot>
+                <tr><td colspan="3">Summary of the table</td></tr>
+            </tfoot>
+        </table>
+    </article>
+    <article>
+        <h2>err Table</h2>
+        <table class="err">
+            <thead>
+                <tr>
+                    <th>Column A</th><th>Column B</th><th>Column C</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd"><td>Data 1</td><td colspan="2">Data 2</td></tr>
+                <tr><td colspan="2">Data 1</td><td>Data 2</td></tr>
+                <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+            </tbody>
+            <tfoot>
+                <tr><td colspan="3">Summary of the table</td></tr>
+            </tfoot>
+        </table>
+    </article>
+    <article>
+        <h2>wrg Table</h2>
+        <table class="wrg">
+            <thead>
+                <tr>
+                    <th>Column A</th><th>Column B</th><th>Column C</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd"><td>Data 1</td><td colspan="2">Data 2</td></tr>
+                <tr><td colspan="2">Data 1</td><td>Data 2</td></tr>
+                <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+            </tbody>
+            <tfoot>
+                <tr><td colspan="3">Summary of the table</td></tr>
+            </tfoot>
+        </table>
+    </article>
+</section>
+
+<h1 id="cards">Cards</h1>
+<section class="three">
+    <div class="card" data-header="Default card">
+        <span>Default card</span>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <span class="meta">Date: today</span>
+    </div>
+    <div class="card ok" data-header="ok card">
+        <span>ok card</span>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <span class="meta">Date: today</span>
+    </div>
+    <div class="card wrg" data-header="wrg card">
+        <span>wrg card</span>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <span class="meta">Date: today</span>
+    </div>
+    <div class="card err" data-header="err card">
+        <span>err card</span>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <span class="meta">Date: today</span>
+    </div>
+    <div class="card color-1" data-header="Color 1 card">
+        <span>Color 1 card</span>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <span class="meta">Date: today</span>
+    </div>
+    <div class="card color-2" data-header="Color 2 card">
+        <span>Color 2 card</span>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <span class="meta">Date: today</span>
+    </div>
+</section>
+
+<h1 id="grids">Responsive Layouts</h1>
+
+<p>
+    We use the very great idea of <i>Heydon Pickering</i> called the <i><a href="https://heydonworks.com/article/the-flexbox-holy-albatross/">The Flexbox Holy Albatross Reincarnated</a></i>.
+</p>
+<p>
+    <ul>
+        <li>no <code>col-sm-1 col-lg-6 col-xl-12</code> madness.</li>
+        <li>no media queries and arbitrary breakoints, which will never cover all device sizes</li>
+        <li>embracing flexbox</li>
+        <li>just use the <code>&lt;section&gt;</code> tag to get resonsiveness</li>
+        <li>configurable margin using <code>&lt;section style=&quot;--margin:2rem;&quot;&gt;&lt;/section&gt;</code></li>
+        <li>no <code>half fourth-1000</code> for unequal sized items, just use <code>flex-grow: 2;</code></li>
+    </ul>
+</p>
+
+<h2>Examples</h2>
+<section>
+    <div class="card" style="flex-grow: .5;">
+        Half-sized card
+    </div>
+    <div class="card">
+        Card
+    </div>
+    <div class="card">
+        Card
+    </div>
+    <div class="card" style="flex-grow: 2;">
+        Double sized card
+    </div>
+</section>
+
+<h3>Margins</h3>
+<section style="--margin: ;">
+    <div class="card">
+        Card
+    </div>
+    <div class="card">
+        Card
+    </div>
+    <div class="card">
+        Card
+    </div>
+    <div class="card">
+        Card
+    </div>
+</section>
+
+<section style="--margin:0;">
+    <div class="card">
+        Card
+    </div>
+    <div class="card">
+        Card
+    </div>
+    <div class="card">
+        Card
+    </div>
+    <div class="card">
+        Card
+    </div>
+</section>
+
+<h3>Setting wrap-all width to 80rem (collapses earlier)</h3>
+<section style="--wrap-at:100rem;">
+    <div class="card">
+        Card
+    </div>
+    <div class="card">
+        Card
+    </div>
+    <div class="card">
+        Card
+    </div>
+    <div class="card">
+        Card
+    </div>
+</section>
+</main>
+<footer>
+    <div>nobloat/css</div>
+    <div><a href="https://github.com/nobloat/css">github.com/nobloat/css</a></div>
+</footer>

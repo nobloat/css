@@ -1,0 +1,46 @@
+table > thead > *, table > tfoot > * {
+    text-align: center;
+}
+
+
+table {
+    margin-bottom: 3rem;
+    border-spacing: 0;
+    width: 100%;
+    
+    border-radius: var(--rad);
+    box-shadow: var(--sh);
+}
+
+tfoot td {
+    text-align: center;
+    padding: 1.2rem 1.5rem;
+}
+
+tbody td, thead th {
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+    border-bottom: 0.1rem solid var(--c-b1);
+}
+
+tbody > tr:not(.odd) {
+    background-color: var(--c-b2);
+    color: var(--c-f1);
+}
+
+tbody > tr.odd {
+    background-color: var(--c-b1);
+    color: var(--c-f1);
+}
+
+tbody > tr:hover, tfoot {
+    font-weight: bold;
+}
+
+td:first-child, th:first-child {
+  padding-left: 2rem;
+}
+
+td:last-child, th:last-child {
+  padding-right: 2rem;
+}
