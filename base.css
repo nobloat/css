@@ -1,45 +1,50 @@
-*,*::before,*::after {box-sizing: border-box;}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
-    font-family: var(--font-family);
-    margin: 0;
-    font-size: 1.2em;
-    font-weight: 300;
-    line-height: 1.3;
+  font-family: var(--font-family);
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.3;
 }
 
 main {
-    background-color:var(--c-bg);
-    color: var(--c-f1);
-    padding: 5rem 3%;
+  background-color: var(--c-bg);
+  color: var(--c-f1);
+  padding: 5rem 3%;
 }
 
 /* https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/ */
 section {
-    display: flex;
-    flex-wrap: wrap;
-    --multiplier: calc(var(--wrap-at, 60rem) - 100%);
-    margin: calc(var(--margin, 1rem) * -1);
+  --multiplier: calc(var(--wrap-at, 60rem) - 100%);
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--margin, 1rem) * -1);
 }
-  
+
 /* https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/ */
 section > * {
-    max-width: 100%;
-    flex-grow: 1;
-    flex-basis: calc(var(--multiplier) * 999);
-    margin: var(--margin,1rem);
+  max-width: 100%;
+  flex-grow: 1;
+  flex-basis: calc(var(--multiplier) * 999);
+  margin: var(--margin, 1rem);
 }
 
 .right {
-    float: right;
+  float: right;
 }
 
 :root {
-    --font-family: Helvetica, Arial, sans-serif;
-    --rad: 0.7rem;  
-    --c-f1: #303742;
-    --c-f2: #303742;
-    --c-b1: #c2c2c2;
-    --c-b2: #c2c2c2;
-    --sh: 0 .25rem 1rem rgba(48,55,66,.15);
+  --font-family: "Helvetica", sans-serif;
+  --rad: 0.7rem;
+  --c-f1: #303742;
+  --c-f2: #303742;
+  --c-b1: #c2c2c2;
+  --c-b2: #c2c2c2;
+  --sh: 0 0.25rem 1rem rgba(48, 55, 66, 0.15);
 }

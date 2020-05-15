@@ -1,14 +1,14 @@
 .card {
-    border: 2px solid var(--c-f1);
-    display: flex;
-    flex-flow: column wrap;
-    border-radius: var(--rad);
-    background: var(--c-b1);
-    padding: 1rem 2rem;
-    box-shadow: var(--sh);
+  border: 2px solid var(--c-f1);
+  display: flex;
+  flex-flow: column wrap;
+  border-radius: var(--rad);
+  background: var(--c-b1);
+  padding: 1rem 2rem;
+  box-shadow: var(--sh);
 }
 
 .card > span:first-child {
-    font-size: 1.5rem;
-    padding-bottom: .5rem;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
 }

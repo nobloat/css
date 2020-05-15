@@ -1,27 +1,26 @@
 ul.pages {
-    display: flex;
-    list-style: none;
-    height: 2.8rem;
+  display: flex;
+  list-style: none;
+  height: 2.8rem;
 }
 
 ul.pages > li {
-    padding: .5rem;
-
+  padding: 0.5rem;
 }
 
 ul.pages > li.active {
-    background-color: var(--c-a);
-    border-radius: var(--rad);
-}
-
-ul.pages > li.active > a  {
-    color: #fff;
+  background-color: var(--c-a);
+  border-radius: var(--rad);
 }
 
 ul.pages > li > a {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+ul.pages > li.active > a {
+  color: #fff;
 }
 
 ul.pages > li.disabled {
-    color: var(--c-f1);
+  color: var(--c-f1);
 }

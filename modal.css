@@ -1,28 +1,28 @@
 .modal > .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(160, 160, 160, 0.843);
-    z-index: 10;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(160, 160, 160, 0.843);
+  z-index: 10;
 }
 
 .modal > input:first-child:checked ~ .overlay .content {
-    opacity: 1;
-    background-color: var(--c-b2);
-    margin: auto 22%;
-    padding: 2rem;
-    border-radius: var(--rad);
-    box-shadow: -7px 40px 298px 200px rgba(66,66,66,1);
+  opacity: 1;
+  background-color: var(--c-b2);
+  margin: auto 22%;
+  padding: 2rem;
+  border-radius: var(--rad);
+  box-shadow: -7px 40px 298px 200px rgba(66, 66, 66, 1);
 }
 
 .modal > input:first-child {
-    display: none;
+  display: none;
 }
 
 .modal > input:first-child:checked ~ .overlay {
-    display: flex;
-    transition: opacity .2s ease-in;
+  display: flex;
+  transition: opacity 0.2s ease-in;
 }

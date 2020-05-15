@@ -1,55 +1,63 @@
 h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 350;
   margin-bottom: 1rem;
   margin-top: 0.5rem;
-  letter-spacing: .17rem;
+  letter-spacing: 0.17rem;
   color: var(--c-h);
 }
+
 p {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 blockquote {
-    border-left: 0.15rem solid var(--c-b1);
-    color: var(--c-f2);
-    padding: .5rem .75rem;
-    margin: 0;
-    font-style: italic;
+  border-left: 0.15rem solid var(--c-b1);
+  color: var(--c-f2);
+  padding: 0.5rem 0.75rem;
+  margin: 0;
+  font-style: italic;
 }
 
 a {
-    color: var(--c-a);
-    text-decoration: none;
+  color: var(--c-a);
+  text-decoration: none;
 }
 
-a:focus, a:hover {
-    color: var(--c-a-hover)
+a:focus,
+a:hover {
+  color: var(--c-a-hover);
 }
 
-ul,ol {
-    margin: .5rem;
-    padding: 0;
-    list-style-position: inside;
+ul,
+ol {
+  margin: 0.5rem;
+  padding: 0;
+  list-style-position: inside;
 }
 
 li {
-    margin-top: .4rem;
+  margin-top: 0.4rem;
 }
 
 hr {
-    border-radius: 1rem;
-    border: .01rem solid var(--c-f2);
-    margin: .25rem;
+  border-radius: 1rem;
+  border: 0.01rem solid var(--c-f2);
+  margin: 0.25rem;
 }
 
 .meta {
-    font-size: 1rem;
-    padding-top: .5rem;
-    text-align: right;
-    float: right;
-    filter: contrast(70%);
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  text-align: right;
+  float: right;
+  filter: contrast(70%);
 }

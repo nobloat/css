@@ -1,39 +1,39 @@
 .alert {
-    width: 100%;
-    background-color: var(--c-b1);
-    display: block;
-    border-radius: var(--rad);
-    box-shadow: var(--sh);
-    animation-timing-function: ease;
-    margin-top: 1rem;
+  width: 100%;
+  background-color: var(--c-b1);
+  display: block;
+  border-radius: var(--rad);
+  box-shadow: var(--sh);
+  animation-timing-function: ease;
+  margin-top: 1rem;
 }
 
-.alert>input {
-    display: none;
+.alert > input {
+  display: none;
 }
 
-.alert>span {
+.alert > span {
   display: block;
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
-.alert>label {
+.alert > label {
   float: right;
   font-size: 1.2rem;
   margin-top: 1rem;
-  margin-right: 1rem;    
+  margin-right: 1rem;
 }
 
-.alert>label::before {
-  content: '\2715';
-  margin-left: .5rem;
+.alert > label::before {
+  content: "\2715";
+  margin-left: 0.5rem;
 }
 
 .close {
   animation-name: dismiss;
   animation-delay: 5s;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 
@@ -52,12 +52,12 @@
 }
 
 @keyframes dismiss {
-    100% {
-      opacity: 0%;
-      width: 0;
-      height: 0;
-      padding: 0;
-      margin: 0;
-      display: none;
-    }
+  100% {
+    opacity: 0%;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    display: none;
   }
+}
