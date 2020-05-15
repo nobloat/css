@@ -1,4 +1,4 @@
-INCLUDED_FILES=$(shell cat style.css | sed -E ':a; s%(.*)/\*.*\*/%\1%; ta; /\/\*/ !b; N; ba' | sed -e "s/@import '\(.*\.css\)';/\1/g")
+INCLUDED_FILES=$(shell cat style.css | sed -E ':a; s%(.*)/\*.*\*/%\1%; ta; /\/\*/ !b; N; ba' | sed -e "s/@import \"\(.*\.css\)\";/\1/g")
 
 all: nobloat.min.css
 
