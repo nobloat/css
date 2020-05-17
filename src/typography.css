@@ -23,8 +23,8 @@ blockquote {
   border-left: 0.15rem solid var(--c-b1);
   color: var(--c-f2);
   padding: 0.5rem 0.75rem;
-  margin: 0;
   font-style: italic;
+  
 }
 
 a {
@@ -57,7 +57,5 @@ hr {
 .meta {
   font-size: 1rem;
   padding-top: 0.5rem;
-  text-align: right;
-  float: right;
   filter: contrast(70%);
 }

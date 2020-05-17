@@ -1,4 +1,4 @@
-@import "base.css";
+@import "layout.css";
 @import "typography.css";
 @import "nav.css";
 @import "button.css";
@@ -20,3 +20,5 @@
 @import "modal.css";
 @import "pagination.css";
 @import "breadcrumbs.css";
+@import "accordion.css";
+@import "tab.css";

@@ -41,7 +41,6 @@ Minimalistic modular pure CSS3 components
   - include it using `<link rel="stylesheet" href="nobloat.min.css">`
 
 ## Customize
-
 Per default, all available components are includeded in [](style.css)
 
 ### Colors
@@ -71,11 +70,14 @@ Per default, all available components are includeded in [](style.css)
 
 ## TODO
 
+- Tab component
+- Visualize HTML+CSS in tabs on index.html
 - Cooler Burger menu (transitions to X)
 - Avatar (circular image)
 
-## Known Issues
 
+## Known Issues
+- Modal not optimized for mobile
 - Edge: Closed alerts leave a very small line (probably some border)
 - Closed alerts consume space
 - Forms do not work in the grid, they are bigger -> Horizontal Scrollbar

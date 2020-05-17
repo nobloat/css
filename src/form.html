@@ -1,0 +1,86 @@
+<h1 id="forms">Forms</h1>
+<section class="three">
+    <article>
+        <form>
+            <fieldset>
+                <h2>Text-Input</h2>
+                <label><span>E-Mail</span><input type="email" placeholder="test@example.org"><span>After</span></label>
+                <label><span>Password</span><input type="password"></label>
+                <label><span>First name</span><input type="text"></label>
+                <label><input type="text"><span>Last name</span></label>
+                <section>
+                    <label><span>Street</span><input type="text"></label>
+                    <label><input type="text"><span>City</span></label>
+                </section> 
+                
+                <span>Simple text input</span>
+                <input type="text" placeholder="Example text input"> 
+                <span>Text area</span>
+                <textarea></textarea>
+            </fieldset>
+            <div>
+                <button type="submit" class="ok">Submit</button>
+                <button type="reset" class="err">Reset</button>
+            </div>
+        </form>
+    </article>
+    <article>
+        <form>
+            <fieldset>
+                <h2>Special input fields</h2>
+                <h3>File upload</h3>
+                <label>
+                    <span>File upload</span>
+                    <input type="file">
+                </label>
+                <h3>Date & Time</h3>
+                <section>
+                    <label>
+                        <span>Date input</span>
+                        <input type="date">
+                    </label>
+                    <label>
+                        <span>Time input</span>
+                        <input type="time">
+                    </label>
+                </section>
+                <h3>Range</h3>
+                <label>
+                    <span>Range</span>
+                    <input type="range" min="0" max="100">
+                </label>
+            </fieldset>
+        </form>
+        
+    </article>
+    <article>
+        <form>
+            <fieldset>
+                <h2>Select box</h2>
+                <label><span>Option</span><select><option>Option 1</option><option>Option 2</option></select></label>
+                <h3>Checkboxes</h3>
+                <span>
+                    <label><input type="checkbox">This is a checkbox</label>
+                    <label><input type="checkbox" checked>This is a pre-selected checkbox</label>
+                </span>
+                <h3>Radio buttons</h3>
+                <span>
+                    <label><input type="radio" name="radio1">Exclusive choice 1</label>
+                    <label><input type="radio" name="radio1" checked>Exclusive choice 2</label>
+                </span>
+
+                <h3>Vertical radio buttons</h3>
+                <span><label><input type="radio" name="radio2" checked >Another exclusive choice 1</label></span>
+                <span><label><input type="radio" name="radio2">Another exclusive choice 2</label></span>
+            </fieldset>
+        </form>
+        <h2>Example login-form</h2>
+        <form>
+            <fieldset>
+                <label class="stack"><span>@</span><input type="text"></label>
+                <label class="stack"><span>•••</span><input type="password"></label>
+            </fieldset>
+            <section class="stack"><button type="submit" class="stack ok">Login</button></section>
+        </form>
+    </article>
+</section>

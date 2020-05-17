@@ -1,6 +1,13 @@
-INCLUDED_FILES=$(shell cat style.css | sed -E ':a; s%(.*)/\*.*\*/%\1%; ta; /\/\*/ !b; N; ba' | sed -e "s/@import \"\(.*\.css\)\";/\1/g")
+INCLUDED_FILES=$(shell cat src/style.css | sed -E ':a; s%(.*)/\*.*\*/%\1%; ta; /\/\*/ !b; N; ba' | sed -e "s/@import \"\(.*\.css\)\";/src\/\1/g")
 
-all: nobloat.min.css
+all: check nobloat.min.css
+
+check: index.html
+	stylelint src/*.css
+	html-validator --verbose --file index.html
+
+index.html: src/*.html
+	bash build.sh
 
 nobloat.min.css: nobloat.css
 	@cat $< \
@@ -39,3 +46,4 @@ clean:
 	@rm -f nobloat.min.css
 	@rm -f *.br
 	@rm -f *.zst
+	@rm -f index.html

@@ -15,12 +15,12 @@ body {
 main {
   background-color: var(--c-bg);
   color: var(--c-f1);
-  padding: 5rem 3%;
+  padding: 5rem 3% 0 3%;
 }
 
 /* https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/ */
 section {
-  --multiplier: calc(var(--wrap-at, 60rem) - 100%);
+  --multiplier: calc(var(--wrap-at, 50rem) - 100%);
 
   display: flex;
   flex-wrap: wrap;
@@ -36,7 +36,9 @@ section > * {
 }
 
 .right {
-  float: right;
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-between;
 }
 
 :root {

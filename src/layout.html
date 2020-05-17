@@ -1,0 +1,44 @@
+<h1 id="grids">Responsive Layouts</h1>
+<p>
+    We use the very great idea of <i>Heydon Pickering</i> called the <i><a href="https://heydonworks.com/article/the-flexbox-holy-albatross/">The Flexbox Holy Albatross Reincarnated</a></i>.
+</p>
+<p>
+    <ul>
+        <li>no <code>col-sm-1 col-lg-6 col-xl-12</code> madness.</li>
+        <li>no media queries and arbitrary breakoints, which will never cover all device sizes</li>
+        <li>embracing flexbox</li>
+        <li>just use the <code>&lt;section&gt;</code> tag to get resonsiveness</li>
+        <li>configurable margin using <code>&lt;section style=&quot;--margin:2rem;&quot;&gt;&lt;/section&gt;</code></li>
+        <li>no <code>half fourth-1000</code> for unequal sized items, just use <code>flex-grow: 2;</code></li>
+    </ul>
+</p>
+
+<h2>Examples</h2>
+<section>
+    <div class="card" style="flex-grow: .5;">Half-sized card</div>
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+    <div class="card" style="flex-grow: 2;">Double sized card</div>
+</section>
+
+<h3>Margins</h3>
+<section style="--margin: 2rem;">
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+</section>
+<section style="--margin:0;">
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+</section>
+
+<h3>Setting wrap-all width to 80rem (collapses earlier)</h3>
+<section style="--wrap-at:100rem;">
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+</section>
