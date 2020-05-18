@@ -12,7 +12,6 @@
 
 .dark-mode-label {
   content: "Dark";
-  color: var(--c-f1);
 }
 
 .dark-mode-label::before {
