@@ -45,11 +45,11 @@ Per default, all available components are includeded in [](style.css)
 
 ### Colors
 
-- Modify `--c-1` and `--c-2` in [](color.css) and [](dark.css)
+- Modify `--c-1` and `--c-2` in [color.css](src/color.css) and [dark.css](src/dark.css)
 
 ### Include/Exclude Components
 
-- Simply add/remove `@import` statements in [](style.css)
+- Simply add/remove `@import` statements in [style.css](src/style.css)
 - Run `make`
 - Grab the resulting `nobloat.min.css` file
 
@@ -69,12 +69,8 @@ Per default, all available components are includeded in [](style.css)
 - https://motherfuckingwebsite.com/
 
 ## TODO
-
-- Tab component
-- Visualize HTML+CSS in tabs on index.html
-- Cooler Burger menu (transitions to X)
 - Avatar (circular image)
-
+- Add multiple themes
 
 ## Known Issues
 - Modal not optimized for mobile
