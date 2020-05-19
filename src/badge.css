@@ -8,12 +8,12 @@
   right: 0;
   top: 0;
   transform: translate(45%, -75%);
-  font-size: 0.8rem;
+  font-size: .8rem;
   line-height: 1;
   font-weight: bold;
   min-width: 1.5rem;
   min-height: 1.2rem;
-  padding: 5px 5px 5px 5px;
+  padding: .25rem;
   text-align: center;
   white-space: nowrap;
   content: attr(data-badge);

@@ -1,3 +1,7 @@
 {
-  "extends": "stylelint-config-standard"
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "number-leading-zero": "never",
+    "unit-whitelist": [["rem", "%", "s", "vh", "vw", "deg"], {"ignoreProperties": {"px": ["box-shadow", "border"]}}]
+  }
 }

@@ -20,7 +20,7 @@ tbody td,
 thead th {
   padding: 1.2rem 1.5rem;
   text-align: left;
-  border-bottom: 0.1rem solid var(--c-b1);
+  border-bottom: .1rem solid var(--c-b1);
 }
 
 tbody > tr:not(.odd) {

@@ -35,7 +35,7 @@ select,
 input:not([type="checkbox"]):not([type="radio"]) {
   font-size: 80%;
   flex: 4;
-  padding: 0.4rem 1rem;
+  padding: .4rem 1rem;
   color: var(--c-f1);
   font-family: var(--font-family);
   border: 2px solid transparent;
@@ -44,7 +44,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
 
 input[type="checkbox"],
 input[type="radio"] {
-  margin-right: 0.5rem;
+  margin-right: .5rem;
   background-color: var(--c-b1);
 }
 
@@ -72,7 +72,7 @@ select:focus {
 
 label > span {
   background-color: var(--c-b1);
-  padding: 0.4rem 1rem;
+  padding: .4rem 1rem;
   flex: 3 3 5;
 }
 

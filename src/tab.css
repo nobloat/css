@@ -1,28 +1,28 @@
 .tab {
-    display: flex;
-    flex-flow: column;
+  display: flex;
+  flex-flow: column;
 }
 
 .tab > div:first-child {
-    display: flex;
-    flex-flow: row nowrap;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 .tab label {
-    padding: .75rem 1.5rem;
-    border-radius: var(--rad) var(--rad) 0 0;
-    cursor: pointer;
+  padding: .75rem 1.5rem;
+  border-radius: var(--rad) var(--rad) 0 0;
+  cursor: pointer;
 }
 
 .tab label:hover {
-    filter: brightness(110%);
+  filter: brightness(110%);
 }
 
 .tab > div:not(:first-child) {
-    max-height: 0;
-    opacity: 0;
-    transition: opacity .25s;
-    overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: opacity .25s;
+  overflow: hidden;
 }
 
 /** Add more tabs here if required **/
@@ -31,9 +31,9 @@
 #t3:checked ~ .t3,
 #t4:checked ~ .t4,
 #t5:checked ~ .t5 {
-    max-height: 100vh;
-    border: 2px solid var(--c-b1);
-    padding: 1rem;
-    opacity: 1;
-    border-radius: 0 var(--rad) var(--rad) var(--rad);
+  max-height: 100vh;
+  border: .1rem solid var(--c-b1);
+  padding: 1rem;
+  opacity: 1;
+  border-radius: 0 var(--rad) var(--rad) var(--rad);
 }
