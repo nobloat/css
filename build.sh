@@ -14,9 +14,14 @@ do
 	then
 		echo "" >> index.html
 		name="${BASH_REMATCH[1]%%.*}"
-		echo "<div class="acc"><div><input type=\"checkbox\" id=\"code-$name\" hidden><label class=\"color-default\" for=\"code-$name\">View source</label><div>" >> index.html
-		echo "<pre class=\"code\" data-lang=\"HTML\">$(cat "src/${BASH_REMATCH[1]}" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g')</pre>" >> index.html
+		echo "<div class=\"row space-around\">" >> index.html
+		echo "<div class="acc"><div><input type=\"checkbox\" id=\"html-$name\" hidden><label class=\"color-default\" for=\"html-$name\">View HTML</label><div>" >> index.html
+		echo "<pre><code class=\"html\">$(cat "src/${BASH_REMATCH[1]}" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g')</code></pre>" >> index.html
 		echo "</div></div></div>" >> index.html
+
+		echo "<div class="acc"><div><input type=\"checkbox\" id=\"css-$name\" hidden><label class=\"color-default\" for=\"css-$name\">View CSS</label><div>" >> index.html
+		echo "<pre><code class=\"css\">$(cat "src/$name.css" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g')</code></pre>" >> index.html
+		echo "</div></div></div></div>" >> index.html
 		continue
 	fi
 

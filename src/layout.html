@@ -1,44 +1,48 @@
-<h1 id="grids">Responsive Layouts</h1>
+<section class="no-margin">
+<article>
+<h2 id="grids">Responsive Layouts</h2>
 <p>
     We use the very great idea of <i>Heydon Pickering</i> called the <i><a href="https://heydonworks.com/article/the-flexbox-holy-albatross/">The Flexbox Holy Albatross Reincarnated</a></i>.
 </p>
 <p>
     <ul>
-        <li>no <code>col-sm-1 col-lg-6 col-xl-12</code> madness.</li>
+        <li>no <code>col-sm-1 col-lg-6 col-xl-12</code> madness</li>
         <li>no media queries and arbitrary breakoints, which will never cover all device sizes</li>
         <li>embracing flexbox</li>
         <li>just use the <code>&lt;section&gt;</code> tag to get resonsiveness</li>
         <li>configurable margin using <code>&lt;section style=&quot;--margin:2rem;&quot;&gt;&lt;/section&gt;</code></li>
         <li>no <code>half fourth-1000</code> for unequal sized items, just use <code>flex-grow: 2;</code></li>
+        <li>To wrap items earlier, set the <code>--wrap-at</code> vraiable on the section</li>
     </ul>
 </p>
+<p><span class="label wrg">Warning:</span> Don't wrap sections in sections, this will result in horizontal scroll bars on mobile devices</p>
 
-<h2>Examples</h2>
-<section>
-    <div class="card" style="flex-grow: .5;">Half-sized card</div>
-    <div class="card">Card</div>
-    <div class="card">Card</div>
-    <div class="card" style="flex-grow: 2;">Double sized card</div>
+</article>
 </section>
 
-<h3>Margins</h3>
-<section style="--margin: 2rem;">
+<section class="no-margin">
+    <div class="card" style="flex-grow: .5;">Half-sized card <code>flex-grow: .5;</code></div>
     <div class="card">Card</div>
     <div class="card">Card</div>
-    <div class="card">Card</div>
-    <div class="card">Card</div>
-</section>
-<section style="--margin:0;">
-    <div class="card">Card</div>
-    <div class="card">Card</div>
-    <div class="card">Card</div>
-    <div class="card">Card</div>
+    <div class="card" style="flex-grow: 2;">Double sized card <code>flex-grow: 2;</code></div>
 </section>
 
-<h3>Setting wrap-all width to 80rem (collapses earlier)</h3>
-<section style="--wrap-at:100rem;">
-    <div class="card">Card</div>
-    <div class="card">Card</div>
-    <div class="card">Card</div>
-    <div class="card">Card</div>
+<section class="no-margin" style="--margin: 2rem;">
+    <div class="card">Card margin: 2rem</div>
+    <div class="card">Card margin: 2rem</div>
+    <div class="card">Card margin: 2rem</div>
+    <div class="card">Card margin: 2rem</div>
+</section>
+<section class="no-margin" style="--margin:0;">
+    <div class="card">Card no margin</div>
+    <div class="card">Card no margin</div>
+    <div class="card">Card no margin</div>
+    <div class="card">Card no margin</div>
+</section>
+
+<section class="no-margin" style="--wrap-at:100rem;">
+    <div class="card">Card wraps at 100rem</div>
+    <div class="card">Card wraps at 100rem</div>
+    <div class="card">Card wraps at 100rem</div>
+    <div class="card">Card wraps at 100rem</div>
 </section>

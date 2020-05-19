@@ -10,8 +10,8 @@ h5,
 h6 {
   font-weight: 350;
   margin-bottom: 1rem;
-  margin-top: .5rem;
-  letter-spacing: .17rem;
+  margin-top: 1rem;
+  letter-spacing: .2rem;
   color: var(--c-h);
 }
 
@@ -24,6 +24,7 @@ blockquote {
   color: var(--c-f2);
   padding: .5rem .75rem;
   font-style: italic;
+  margin-left: 1rem;
 }
 
 a {

@@ -1,0 +1,44 @@
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.row > * {
+  margin: .5rem;
+}
+
+.col {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.col > * {
+  margin: .5rem;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.end {
+  align-items: flex-end;
+}
+
+.right {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-between;
+}

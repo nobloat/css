@@ -10,7 +10,7 @@
 .acc > div > label {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: .5rem;
   cursor: pointer;
 }
 
@@ -38,7 +38,6 @@
 }
 
 .acc > div > input:checked ~ div {
-  padding: 1rem;
   border: 2px solid var(--c-b1);
   border-radius: 0 0 var(--rad) var(--rad);
 }

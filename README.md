@@ -77,4 +77,3 @@ Per default, all available components are includeded in [](style.css)
 - Edge: Closed alerts leave a very small line (probably some border)
 - Closed alerts consume space
 - Forms do not work in the grid, they are bigger -> Horizontal Scrollbar
-- span.button for Modals does not hover -> Probably a wontfix

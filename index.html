@@ -1,14 +1,35 @@
 
 <!doctype html>
 <html lang="en">
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="src/style.css">
 <!-- no favicon -->
 <link rel="shortcut icon" href="#" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 <title>nobloat/css</title>
+<style>
+section {
+max-width: 75rem;
+--margin: 2rem;
+}
+
+section:not(.no-margin) {
+margin-bottom: 6rem;
+}
+
+.row {
+padding-top: 2rem;
+}
+</style>
 </head>
+
 <body>
 <!-- Dark/Light theme switch -->
 <input id="dark-mode" class="dark-mode-checkbox" type="checkbox" hidden>
@@ -20,27 +41,35 @@
     <input type="checkbox" id="nav-check" hidden>
     <nav>
         <a href="#typography">Typography</a>
-           <div class="menu">
-                <a href="#">Components</a>
-                <hr>
-                <a href="#buttons">Buttons</a>
-                <a href="#labels">Labels</a>
-                <a href="#badges">Badges</a>
-                <a href="#spinners">Spinners</a>
-                <hr>
-                <a href="#alerts">Alerts</a>
-                <a href="#toasts">Toasts</a>
-                <a href="#modals">Modals</a>
-                <hr>
-                <a href="#tooltips">Tooltips</a>
-                <hr>
-                <a href="#accordion">Accordion</a>
-                <a href="#tabs">Tabs</a>
-                <a href="#cards">Cards</a>
-            </div>
-            <a href="#darkmode">Darkmode</a>
-            <a href="#tables">Tables</a>
-            <a href="#grids">Responsive Layouts</a>
+        <a href="#nav">Nav</a>
+        <div class="menu">
+            <a href="#">Components</a>
+            <hr>
+            <a href="#code">Code</a>
+            <a href="#breadcrumbs">Breadcrumbs</a>
+            <a href="#kbd">Kbd</a>
+            <a href="#pagination">Pagination</a>
+            <hr>
+            <a href="#label">Labels</a>
+            <a href="#badge">Badges</a>
+            <a href="#button">Buttons</a>
+            <a href="#spinner">Spinners</a>
+            <a href="#tooltip">Tooltips</a>
+            <hr>
+            <a href="#alert">Alerts</a>
+            <a href="#toasts">Toasts</a>
+            <a href="#modal">Modals</a>
+            <hr>
+            <a href="#accordion">Accordion</a>
+            <a href="#tabs">Tabs</a>
+            <hr>
+            <a href="#table">Tables</a>
+            <a href="#card">Cards</a>
+        </div>
+            <a href="#form">Forms</a>
+            <a href="#dark">Dark mode</a>
+            <a href="#layout">Responsive Layout</a>
+            <a href="#helper">Helper</a>
     </nav>
 </header><!--This should be placed at the start of the document-->
 <div class="toasts right bottom">
@@ -57,57 +86,264 @@
 </div><main>
 
 <section>
+<article id="typography">
 <article>
-<h1 id="typography">Typography</h1>
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
-eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-
-<h2>Quotes</h2>
-<blockquote>
-    Wenn du zu den Nonkonformisten gehören willst, musst du dich anziehen 
-    wie wir und auf dieselbe Musik stehen wie wir!
-    <div class="right">
-        <span class="meta">Goth Kids, South Park - S07E14~10:40</span>
+    <h2 id="typography">Typography</h2>
+    <div class="row space-between end">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
     </div>
-</blockquote>
-
-<div class=acc><div><input type="checkbox" id="code-typography" hidden><label class="color-default" for="code-typography">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;h1&gt;Heading 1&lt;/h1&gt;
-&lt;h2&gt;Heading 2&lt;/h2&gt;
-&lt;h3&gt;Heading 3&lt;/h3&gt;
-&lt;h4&gt;Heading 4&lt;/h4&gt;
-&lt;h5&gt;Heading 5&lt;/h5&gt;
-&lt;h6&gt;Heading 6&lt;/h6&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
-eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
-
-&lt;h2&gt;Quotes&lt;/h2&gt;
-&lt;blockquote&gt;
-    Wenn du zu den Nonkonformisten gehören willst, musst du dich anziehen 
-    wie wir und auf dieselbe Musik stehen wie wir!
-    &lt;div class=&quot;right&quot;&gt;
-        &lt;span class=&quot;meta&quot;&gt;Goth Kids, South Park - S07E14~10:40&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/blockquote&gt;</pre>
-</div></div></div>
+    
+    <h3>Paragraph</h3>
+    
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+et accusam et justo duo dolores et ea rebum. 
+Stet clita kasd gubergren, no sea takimata sanctus 
+est Lorem ipsum dolor sit amet.</p>
+    
+    <h3>Quotes</h3>
+    <blockquote>
+        Wenn du zu den Nonkonformisten gehören willst, 
+        musst du dich anziehen 
+        wie wir und auf dieselbe Musik stehen wie wir!
+        <div class="right">
+            <span class="meta">Goth Kids, South Park - S07E14~10:40</span>
+        </div>
+    </blockquote>
 </article>
-<article>
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-typography" hidden><label class="color-default" for="html-typography">View HTML</label><div>
+<pre><code class="html">&lt;article&gt;
+    &lt;h2 id=&quot;typography&quot;&gt;Typography&lt;/h2&gt;
+    &lt;div class=&quot;row space-between end&quot;&gt;
+        &lt;h1&gt;Heading 1&lt;/h1&gt;
+        &lt;h2&gt;Heading 2&lt;/h2&gt;
+        &lt;h3&gt;Heading 3&lt;/h3&gt;
+        &lt;h4&gt;Heading 4&lt;/h4&gt;
+        &lt;h5&gt;Heading 5&lt;/h5&gt;
+        &lt;h6&gt;Heading 6&lt;/h6&gt;
+    &lt;/div&gt;
+    
+    &lt;h3&gt;Paragraph&lt;/h3&gt;
+    
+    &lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+et accusam et justo duo dolores et ea rebum. 
+Stet clita kasd gubergren, no sea takimata sanctus 
+est Lorem ipsum dolor sit amet.&lt;/p&gt;
+    
+    &lt;h3&gt;Quotes&lt;/h3&gt;
+    &lt;blockquote&gt;
+        Wenn du zu den Nonkonformisten gehören willst, 
+        musst du dich anziehen 
+        wie wir und auf dieselbe Musik stehen wie wir!
+        &lt;div class=&quot;right&quot;&gt;
+            &lt;span class=&quot;meta&quot;&gt;Goth Kids, South Park - S07E14~10:40&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/blockquote&gt;
+&lt;/article&gt;</code></pre>
+</div></div></div>
+<div class=acc><div><input type="checkbox" id="css-typography" hidden><label class="color-default" for="css-typography">View CSS</label><div>
+<pre><code class="css">h1 {
+  font-size: 3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 350;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  letter-spacing: .2rem;
+  color: var(--c-h);
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+blockquote {
+  border-left: .15rem solid var(--c-b1);
+  color: var(--c-f2);
+  padding: .5rem .75rem;
+  font-style: italic;
+  margin-left: 1rem;
+}
+
+a {
+  color: var(--c-a);
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: var(--c-a-hover);
+}
+
+ul,
+ol {
+  margin: .5rem;
+  padding: 0;
+  list-style-position: inside;
+}
+
+li {
+  margin-top: .4rem;
+}
+
+hr {
+  border-radius: 1rem;
+  border: .01rem solid var(--c-f2);
+  margin: .25rem;
+}
+
+.meta {
+  font-size: 1rem;
+  padding-top: .5rem;
+  filter: contrast(70%);
+}</code></pre>
+</div></div></div></div>
+</article>
+</section>
+
+<section>
+<article id="nav">
+<h2>Navigation</h2>
+<p>The Navigation menu/header is responsive and supports menus.
+By default it wraps at <code>60rem</code>.
+</p>
+
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-nav" hidden><label class="color-default" for="html-nav">View HTML</label><div>
+<pre><code class="html">&lt;header&gt;
+    &lt;a href=&quot;#&quot;&gt;nobloat/css&lt;/a&gt;
+    &lt;label class=&quot;nav-button&quot; for=&quot;nav-check&quot;&gt;
+        &lt;svg &gt;&lt;path d=&quot;M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z&quot;/&gt;&lt;/svg&gt;
+    &lt;/label&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;nav-check&quot; hidden&gt;
+    &lt;nav&gt;
+        &lt;a href=&quot;#typography&quot;&gt;Typography&lt;/a&gt;
+        &lt;a href=&quot;#nav&quot;&gt;Nav&lt;/a&gt;
+        &lt;div class=&quot;menu&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Components&lt;/a&gt;
+            &lt;hr&gt;
+            &lt;a href=&quot;#code&quot;&gt;Code&lt;/a&gt;
+            &lt;a href=&quot;#breadcrumbs&quot;&gt;Breadcrumbs&lt;/a&gt;
+            &lt;a href=&quot;#kbd&quot;&gt;Kbd&lt;/a&gt;
+            &lt;a href=&quot;#pagination&quot;&gt;Pagination&lt;/a&gt;
+            &lt;hr&gt;
+            &lt;a href=&quot;#label&quot;&gt;Labels&lt;/a&gt;
+            &lt;a href=&quot;#badge&quot;&gt;Badges&lt;/a&gt;
+            &lt;a href=&quot;#button&quot;&gt;Buttons&lt;/a&gt;
+            &lt;a href=&quot;#spinner&quot;&gt;Spinners&lt;/a&gt;
+            &lt;a href=&quot;#tooltip&quot;&gt;Tooltips&lt;/a&gt;
+            &lt;hr&gt;
+            &lt;a href=&quot;#alert&quot;&gt;Alerts&lt;/a&gt;
+            &lt;a href=&quot;#toasts&quot;&gt;Toasts&lt;/a&gt;
+            &lt;a href=&quot;#modal&quot;&gt;Modals&lt;/a&gt;
+            &lt;hr&gt;
+            &lt;a href=&quot;#accordion&quot;&gt;Accordion&lt;/a&gt;
+            &lt;a href=&quot;#tabs&quot;&gt;Tabs&lt;/a&gt;
+            &lt;hr&gt;
+            &lt;a href=&quot;#table&quot;&gt;Tables&lt;/a&gt;
+            &lt;a href=&quot;#card&quot;&gt;Cards&lt;/a&gt;
+        &lt;/div&gt;
+            &lt;a href=&quot;#form&quot;&gt;Forms&lt;/a&gt;
+            &lt;a href=&quot;#dark&quot;&gt;Dark mode&lt;/a&gt;
+            &lt;a href=&quot;#layout&quot;&gt;Responsive Layout&lt;/a&gt;
+            &lt;a href=&quot;#helper&quot;&gt;Helper&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+</div></div></div>
+<div class=acc><div><input type="checkbox" id="css-nav" hidden><label class="color-default" for="css-nav">View CSS</label><div>
+<pre><code class="css">body &gt; header {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  max-height: var(--h-hdr, 5rem);
+  background: linear-gradient(0deg, var(--c-b2) 3%, var(--c-b1) 100%);
+  font-size: 1.5rem;
+  z-index: 3;
+  padding: 0 1rem;
+}
+
+/* Burger */
+header hr {
+  margin: .55rem;
+}
+
+nav &gt; * {
+  padding: 0 .7rem;
+}
+
+body &gt; header &gt; * {
+  display: flex;
+  flex-flow: wrap row;
+  padding: 1.5rem 0;
+}
+
+.nav-button,
+#nav-check {
+  display: none;
+}
+
+@media (max-width: 60rem) {
+  .nav-button {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 4rem;
+  }
+
+  #nav-check:checked ~ nav {
+    flex-flow: nowrap column;
+    background-color: var(--c-b2);
+    transition: opacity .25s ease-out;
+    text-align: center;
+    margin: 4.5rem -1rem;
+    opacity: 1;
+    overflow-y: auto;
+    height: 100vh;
+    min-width: 40vw;
+  }
+
+  #nav-check:checked ~ nav &gt; * {
+    padding: .5rem 3rem;
+  }
+
+  #nav-check:not(:checked) ~ nav {
+    height: 0;
+    width: 0;
+    padding: 0;
+    opacity: 0;
+  }
+}</code></pre>
+</div></div></div></div>
+</article>
+</section>
+<section>
+<article id="code">
 <h2>Code</h2>
 <pre data-lang="Go" class="code">
 <code>package main
@@ -117,8 +353,9 @@ func main() {
     fmt.Println("hello world")
 }
 </code></pre>
-<div class=acc><div><input type="checkbox" id="code-code" hidden><label class="color-default" for="code-code">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;h2&gt;Code&lt;/h2&gt;
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-code" hidden><label class="color-default" for="html-code">View HTML</label><div>
+<pre><code class="html">&lt;h2&gt;Code&lt;/h2&gt;
 &lt;pre data-lang=&quot;Go&quot; class=&quot;code&quot;&gt;
 &lt;code&gt;package main
 import &quot;fmt&quot;
@@ -126,16 +363,121 @@ import &quot;fmt&quot;
 func main() {
     fmt.Println(&quot;hello world&quot;)
 }
-&lt;/code&gt;&lt;/pre&gt;</pre>
+&lt;/code&gt;&lt;/pre&gt;</code></pre>
 </div></div></div>
+<div class=acc><div><input type="checkbox" id="css-code" hidden><label class="color-default" for="css-code">View CSS</label><div>
+<pre><code class="css">.code {
+  color: var(--c);
+  position: relative;
+  font-size: .75rem;
+}
 
+pre {
+  font-size: .8rem;
+}
+
+.code::before {
+  color: var(--c-b1);
+  content: attr(data-lang);
+  font-size: 1.15rem;
+  position: absolute;
+  font-weight: bold;
+  right: .4rem;
+  top: .1rem;
+}
+
+.code &gt; code {
+  color: inherit;
+  display: block;
+  line-height: 1.5;
+  overflow-x: auto;
+  padding: 0 1rem;
+  width: 100%;
+  border: 2px solid var(--c-b1);
+  border-radius: var(--rad);
+}</code></pre>
+</div></div></div></div>
+</article>
+<article id="breadcrumbs">
+<h2>Bread crumbs</h2>
+<ul class="bread">
+    <li><a>Main Section</a></li>
+    <li><a>Sub Section</a></li>
+    <li class="active">
+        <a>Active Section</a>
+    </li>
+</ul>
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-breadcrumbs" hidden><label class="color-default" for="html-breadcrumbs">View HTML</label><div>
+<pre><code class="html">&lt;h2&gt;Bread crumbs&lt;/h2&gt;
+&lt;ul class=&quot;bread&quot;&gt;
+    &lt;li&gt;&lt;a&gt;Main Section&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a&gt;Sub Section&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;
+        &lt;a&gt;Active Section&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div></div></div>
+<div class=acc><div><input type="checkbox" id="css-breadcrumbs" hidden><label class="color-default" for="css-breadcrumbs">View CSS</label><div>
+<pre><code class="css">ul.bread {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+}
+
+ul.bread &gt; li {
+  padding: .2rem;
+  font-size: 1rem;
+  padding-top: .5rem;
+  text-align: right;
+  float: right;
+  filter: contrast(70%);
+  cursor: pointer;
+}
+
+ul.bread &gt; li:not(.active) &gt; a {
+  color: var(--c-f1);
+}
+
+ul.bread &gt; :not(:last-child)::after {
+  content: &quot; / &quot;;
+}</code></pre>
+</div></div></div></div>
+</article>
+</section>
+
+<section>
+<article id="kbd">
 <h2>Kbd</h2>
-<kbd>Ctrl+S</kbd><kbd>Ctrl+C</kbd><kbd>Ctrl+V</kbd>
-<div class=acc><div><input type="checkbox" id="code-kbd" hidden><label class="color-default" for="code-kbd">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;h2&gt;Kbd&lt;/h2&gt;
-&lt;kbd&gt;Ctrl+S&lt;/kbd&gt;&lt;kbd&gt;Ctrl+C&lt;/kbd&gt;&lt;kbd&gt;Ctrl+V&lt;/kbd&gt;</pre>
-</div></div></div>
+<div class="row">
+  <kbd>Ctrl+S</kbd>
+  <kbd>Ctrl+C</kbd>
+  <kbd>Ctrl+V</kbd>
+</div>
 
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-kbd" hidden><label class="color-default" for="html-kbd">View HTML</label><div>
+<pre><code class="html">&lt;h2&gt;Kbd&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;kbd&gt;Ctrl+S&lt;/kbd&gt;
+  &lt;kbd&gt;Ctrl+C&lt;/kbd&gt;
+  &lt;kbd&gt;Ctrl+V&lt;/kbd&gt;
+&lt;/div&gt;</code></pre>
+</div></div></div>
+<div class=acc><div><input type="checkbox" id="css-kbd" hidden><label class="color-default" for="css-kbd">View CSS</label><div>
+<pre><code class="css">kbd {
+  background-color: var(--c-b1);
+  font-size: 1.2rem;
+  margin: .7rem;
+  padding: .2rem .6rem;
+  letter-spacing: .1rem;
+  border-radius: var(--rad);
+  box-shadow: 4px 3px 7px 0 #777;
+  cursor: pointer;
+}</code></pre>
+</div></div></div></div>
+</article>
+<article id="pagination">
 <h2>Pagination</h2>
 <ul class="pages">
     <li><a>Prev</a></li>
@@ -145,8 +487,9 @@ func main() {
     <li><a>99</a></li>
     <li><a>Next</a></li>
 </ul>
-<div class=acc><div><input type="checkbox" id="code-pagination" hidden><label class="color-default" for="code-pagination">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;h2&gt;Pagination&lt;/h2&gt;
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-pagination" hidden><label class="color-default" for="html-pagination">View HTML</label><div>
+<pre><code class="html">&lt;h2&gt;Pagination&lt;/h2&gt;
 &lt;ul class=&quot;pages&quot;&gt;
     &lt;li&gt;&lt;a&gt;Prev&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a&gt;1&lt;/a&gt;&lt;/li&gt;
@@ -154,74 +497,40 @@ func main() {
     &lt;li&gt;...&lt;/li&gt;
     &lt;li&gt;&lt;a&gt;99&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a&gt;Next&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+&lt;/ul&gt;</code></pre>
 </div></div></div>
+<div class=acc><div><input type="checkbox" id="css-pagination" hidden><label class="color-default" for="css-pagination">View CSS</label><div>
+<pre><code class="css">ul.pages {
+  display: flex;
+  list-style: none;
+  height: 2.8rem;
+}
 
-<h2>Bread crumbs</h2>
-<ul class="bread">
-    <li><a>Main Section</a></li>
-    <li><a>Sub Section</a></li>
-    <li class="active"><a>Active Section</a></li>
-</ul>
-<div class=acc><div><input type="checkbox" id="code-breadcrumbs" hidden><label class="color-default" for="code-breadcrumbs">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;h2&gt;Bread crumbs&lt;/h2&gt;
-&lt;ul class=&quot;bread&quot;&gt;
-    &lt;li&gt;&lt;a&gt;Main Section&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a&gt;Sub Section&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;active&quot;&gt;&lt;a&gt;Active Section&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
-</div></div></div>
+ul.pages &gt; li {
+  padding: .5rem;
+}
+
+ul.pages &gt; li.active {
+  background-color: var(--c-a);
+  border-radius: var(--rad);
+}
+
+ul.pages &gt; li &gt; a {
+  cursor: pointer;
+}
+
+ul.pages &gt; li.active &gt; a {
+  color: #fff;
+}
+
+ul.pages &gt; li.disabled {
+  color: var(--c-f1);
+}</code></pre>
+</div></div></div></div>
 </article>
 </section>
 <section>
-<article>
-<h2 id="buttons">Buttons</h2>
-<button>Default Button</button>
-<button class="color-1">Color 1 Button</button>
-<button class="color-2">Color 2 Button</button>
-<button class="ok">ok Button</button>
-<button class="wrg">wrg Button</button>
-<button class="err">err Button</button>
-<div class=acc><div><input type="checkbox" id="code-button" hidden><label class="color-default" for="code-button">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;h2 id=&quot;buttons&quot;&gt;Buttons&lt;/h2&gt;
-&lt;button&gt;Default Button&lt;/button&gt;
-&lt;button class=&quot;color-1&quot;&gt;Color 1 Button&lt;/button&gt;
-&lt;button class=&quot;color-2&quot;&gt;Color 2 Button&lt;/button&gt;
-&lt;button class=&quot;ok&quot;&gt;ok Button&lt;/button&gt;
-&lt;button class=&quot;wrg&quot;&gt;wrg Button&lt;/button&gt;
-&lt;button class=&quot;err&quot;&gt;err Button&lt;/button&gt;</pre>
-</div></div></div>
-</article>
-
-<article>
- <h2 id="badges">Badges</h2>
-
- <section>
-    <div>
-        <button>Button</button>
-        <span class="badge color-1" data-badge="30"><!----></span>
-        <button>Button</button>
-        <span class="badge color-2" data-badge="3333"><!----></span>
-        <button>Button</button>
-        <span class="badge err" data-badge="3"><!----></span>
-    </div>
- </section>
-<div class=acc><div><input type="checkbox" id="code-badge" hidden><label class="color-default" for="code-badge">View source</label><div>
-<pre class="code" data-lang="HTML"> &lt;h2 id=&quot;badges&quot;&gt;Badges&lt;/h2&gt;
-
- &lt;section&gt;
-    &lt;div&gt;
-        &lt;button&gt;Button&lt;/button&gt;
-        &lt;span class=&quot;badge color-1&quot; data-badge=&quot;30&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-        &lt;button&gt;Button&lt;/button&gt;
-        &lt;span class=&quot;badge color-2&quot; data-badge=&quot;3333&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-        &lt;button&gt;Button&lt;/button&gt;
-        &lt;span class=&quot;badge err&quot; data-badge=&quot;3&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-    &lt;/div&gt;
- &lt;/section&gt;</pre>
-</div></div></div>
-</article>
-<article>
+<article id="label">
 <h2 id="labels">Labels</h2>
 <span class="label">This is a default label</span>
 <span class="label color-1">This is a colored label</span>
@@ -229,73 +538,425 @@ func main() {
 <span class="label err">This is an err label</span>
 <span class="label ok">This is a ok label</span>
 <span class="label wrg">This is a warninig label</span>
-<div class=acc><div><input type="checkbox" id="code-label" hidden><label class="color-default" for="code-label">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;h2 id=&quot;labels&quot;&gt;Labels&lt;/h2&gt;
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-label" hidden><label class="color-default" for="html-label">View HTML</label><div>
+<pre><code class="html">&lt;h2 id=&quot;labels&quot;&gt;Labels&lt;/h2&gt;
 &lt;span class=&quot;label&quot;&gt;This is a default label&lt;/span&gt;
 &lt;span class=&quot;label color-1&quot;&gt;This is a colored label&lt;/span&gt;
 &lt;span class=&quot;label color-2&quot;&gt;This is a colored label&lt;/span&gt;
 &lt;span class=&quot;label err&quot;&gt;This is an err label&lt;/span&gt;
 &lt;span class=&quot;label ok&quot;&gt;This is a ok label&lt;/span&gt;
-&lt;span class=&quot;label wrg&quot;&gt;This is a warninig label&lt;/span&gt;</pre>
+&lt;span class=&quot;label wrg&quot;&gt;This is a warninig label&lt;/span&gt;</code></pre>
 </div></div></div>
+<div class=acc><div><input type="checkbox" id="css-label" hidden><label class="color-default" for="css-label">View CSS</label><div>
+<pre><code class="css">.label {
+  background-color: var(--c-b1);
+  font-size: .8rem;
+  white-space: nowrap;
+  line-height: 2rem;
+  padding: .4rem .6rem;
+  border-radius: var(--rad);
+}</code></pre>
+</div></div></div></div>
 </article>
-<article>
+<article id="badge">
+<h2 id="badges">Badges</h2>
+<div>
+  <button>Button</button>
+  <span class="badge color-1" data-badge="30">
+  </span>
+  <button>Button</button>
+  <span class="badge color-2" data-badge="A">
+  </span>
+  <button>Button</button>
+  <span class="badge err" data-badge="3">
+  </span>
+</div>
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-badge" hidden><label class="color-default" for="html-badge">View HTML</label><div>
+<pre><code class="html">&lt;h2 id=&quot;badges&quot;&gt;Badges&lt;/h2&gt;
+&lt;div&gt;
+  &lt;button&gt;Button&lt;/button&gt;
+  &lt;span class=&quot;badge color-1&quot; data-badge=&quot;30&quot;&gt;
+  &lt;/span&gt;
+  &lt;button&gt;Button&lt;/button&gt;
+  &lt;span class=&quot;badge color-2&quot; data-badge=&quot;A&quot;&gt;
+  &lt;/span&gt;
+  &lt;button&gt;Button&lt;/button&gt;
+  &lt;span class=&quot;badge err&quot; data-badge=&quot;3&quot;&gt;
+  &lt;/span&gt;
+&lt;/div&gt;</code></pre>
+</div></div></div>
+<div class=acc><div><input type="checkbox" id="css-badge" hidden><label class="color-default" for="css-badge">View CSS</label><div>
+<pre><code class="css">.badge {
+  position: relative;
+  white-space: nowrap;
+}
+
+.badge::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(45%, -75%);
+  font-size: .8rem;
+  line-height: 1;
+  font-weight: bold;
+  min-width: 1.5rem;
+  min-height: 1.2rem;
+  padding: .25rem;
+  text-align: center;
+  white-space: nowrap;
+  content: attr(data-badge);
+  border-radius: 3rem;
+  box-shadow: var(--sh);
+  display: inline-block;
+  background-color: inherit;
+  z-index: 2;
+}</code></pre>
+</div></div></div></div>
+</article>
+<article id="button">
+<h2 id="buttons">Buttons</h2>
+<button>Default Button</button>
+<button class="color-1">Color 1 Button</button>
+<button class="color-2">Color 2 Button</button>
+<button class="ok">ok Button</button>
+<button class="wrg">wrg Button</button>
+<button class="err">err Button</button>
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-button" hidden><label class="color-default" for="html-button">View HTML</label><div>
+<pre><code class="html">&lt;h2 id=&quot;buttons&quot;&gt;Buttons&lt;/h2&gt;
+&lt;button&gt;Default Button&lt;/button&gt;
+&lt;button class=&quot;color-1&quot;&gt;Color 1 Button&lt;/button&gt;
+&lt;button class=&quot;color-2&quot;&gt;Color 2 Button&lt;/button&gt;
+&lt;button class=&quot;ok&quot;&gt;ok Button&lt;/button&gt;
+&lt;button class=&quot;wrg&quot;&gt;wrg Button&lt;/button&gt;
+&lt;button class=&quot;err&quot;&gt;err Button&lt;/button&gt;</code></pre>
+</div></div></div>
+<div class=acc><div><input type="checkbox" id="css-button" hidden><label class="color-default" for="css-button">View CSS</label><div>
+<pre><code class="css">button {
+  border-radius: var(--rad);
+  background-color: var(--c-b1);
+  color: var(--c-f1);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: .7rem 1rem;
+  text-align: center;
+  margin: .15rem;
+  border: 2px solid transparent;
+  box-shadow: var(--sh);
+}
+
+button:hover {
+  filter: brightness(120%);
+}</code></pre>
+</div></div></div></div>
+</article>
+</section>
+<section>
+<article id="spinner">
 <h2 id="spinners">Spinners</h2>
-<h3>Spinners small</h3>
-<span class="spinner"><!----></span>
-<span class="spinner color-1"><!----></span>
-<span class="spinner color-2"><!----></span>
-<span class="spinner ok"><!----></span>
-<span class="spinner wrg"><!----></span>
-<span class="spinner err"><!----></span>
+<div class="row space-between">
+  <article>
+    <h3>Spinners small</h3>
+    <span class="spinner"></span>
+    <span class="spinner color-1"></span>
+    <span class="spinner color-2"></span>
+    <span class="spinner ok"></span>
+    <span class="spinner wrg"></span>
+    <span class="spinner err"></span>
+    
+    <button>
+      <span class="spinner ok">
+      </span> Button with Spinner
+    </button>
+    
+    <h3>Spinners Medium</h3>
+    <span class="spinner medium"></span>
+    <span class="spinner medium color-1"></span>
+    <span class="spinner medium color-2"></span>
+    <span class="spinner medium ok"></span>
+    <span class="spinner medium wrg"></span>
+    <span class="spinner medium err"></span>
+  </article>
+  
+  <article>
+    <h3>Spinners large</h3>
+  <span class="spinner large"></span>
+  <span class="spinner large color-1"></span>
+  <span class="spinner large color-2"></span>
+  <span class="spinner large ok"></span>
+  <span class="spinner large wrg"></span>
+  <span class="spinner large err"></span>
+  </article>
+</div>
 
-<button><span class="spinner ok"><!----></span> Button with Spinner</button>
 
-<h3>Spinners Medium</h3>
-<span class="spinner medium"><!----></span>
-<span class="spinner medium color-1"><!----></span>
-<span class="spinner medium color-2"><!----></span>
-<span class="spinner medium ok"><!----></span>
-<span class="spinner medium wrg"><!----></span>
-<span class="spinner medium err"><!----></span>
 
-<h3>Spinners large</h3>
-<span class="spinner large"><!----></span>
-<span class="spinner large color-1"><!----></span>
-<span class="spinner large color-2"><!----></span>
-<span class="spinner large ok"><!----></span>
-<span class="spinner large wrg"><!----></span>
-<span class="spinner large err"><!----></span>
-<div class=acc><div><input type="checkbox" id="code-spinner" hidden><label class="color-default" for="code-spinner">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;h2 id=&quot;spinners&quot;&gt;Spinners&lt;/h2&gt;
-&lt;h3&gt;Spinners small&lt;/h3&gt;
-&lt;span class=&quot;spinner&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner color-1&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner color-2&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner ok&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner wrg&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner err&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-
-&lt;button&gt;&lt;span class=&quot;spinner ok&quot;&gt;&lt;!----&gt;&lt;/span&gt; Button with Spinner&lt;/button&gt;
-
-&lt;h3&gt;Spinners Medium&lt;/h3&gt;
-&lt;span class=&quot;spinner medium&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner medium color-1&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner medium color-2&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner medium ok&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner medium wrg&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner medium err&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-
-&lt;h3&gt;Spinners large&lt;/h3&gt;
-&lt;span class=&quot;spinner large&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner large color-1&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner large color-2&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner large ok&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner large wrg&quot;&gt;&lt;!----&gt;&lt;/span&gt;
-&lt;span class=&quot;spinner large err&quot;&gt;&lt;!----&gt;&lt;/span&gt;</pre>
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-spinner" hidden><label class="color-default" for="html-spinner">View HTML</label><div>
+<pre><code class="html">&lt;h2 id=&quot;spinners&quot;&gt;Spinners&lt;/h2&gt;
+&lt;div class=&quot;row space-between&quot;&gt;
+  &lt;article&gt;
+    &lt;h3&gt;Spinners small&lt;/h3&gt;
+    &lt;span class=&quot;spinner&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;spinner color-1&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;spinner color-2&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;spinner ok&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;spinner wrg&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;spinner err&quot;&gt;&lt;/span&gt;
+    
+    &lt;button&gt;
+      &lt;span class=&quot;spinner ok&quot;&gt;
+      &lt;/span&gt; Button with Spinner
+    &lt;/button&gt;
+    
+    &lt;h3&gt;Spinners Medium&lt;/h3&gt;
+    &lt;span class=&quot;spinner medium&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;spinner medium color-1&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;spinner medium color-2&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;spinner medium ok&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;spinner medium wrg&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;spinner medium err&quot;&gt;&lt;/span&gt;
+  &lt;/article&gt;
+  
+  &lt;article&gt;
+    &lt;h3&gt;Spinners large&lt;/h3&gt;
+  &lt;span class=&quot;spinner large&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;spinner large color-1&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;spinner large color-2&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;spinner large ok&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;spinner large wrg&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;spinner large err&quot;&gt;&lt;/span&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</code></pre>
 </div></div></div>
+<div class=acc><div><input type="checkbox" id="css-spinner" hidden><label class="color-default" for="css-spinner">View CSS</label><div>
+<pre><code class="css">span.spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-bottom;
+  border-width: .15rem;
+  border-style: solid;
+  border-right-color: transparent;
+  border-radius: 100%;
+  background-color: transparent;
+  animation: spinner-border .75s linear infinite;
+}
+
+.spinner.medium {
+  border-width: .3rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.spinner.large {
+  border-width: .4rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}</code></pre>
+</div></div></div></div>
 </article>
-<article>
+</section>
+<section>
+<article id="tooltip">
+<h2 id="tooltips">Tooltips</h2>
+<div class="row space-between">
+    <div>
+        <button class="tooltip-top" data-tooltip="This is the tip">
+            Button with top tooltip
+        </button>
+    </div>
+    <div>
+        <button class="tooltip-left" data-tooltip="This is the tip">
+            Button with left tooltip
+        </button>
+    </div>
+</div>
+<div class="row space-between">
+    <div>
+        <button class="tooltip-right" data-tooltip="This is the tip">
+            Button with right tooltip
+        </button>
+    </div>
+    <div>
+        <button class="tooltip-bottom" data-tooltip="This is the tip">
+            Button with bottom tooltip
+        </button>
+    </div>
+</div>
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-tooltip" hidden><label class="color-default" for="html-tooltip">View HTML</label><div>
+<pre><code class="html">&lt;h2 id=&quot;tooltips&quot;&gt;Tooltips&lt;/h2&gt;
+&lt;div class=&quot;row space-between&quot;&gt;
+    &lt;div&gt;
+        &lt;button class=&quot;tooltip-top&quot; data-tooltip=&quot;This is the tip&quot;&gt;
+            Button with top tooltip
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;button class=&quot;tooltip-left&quot; data-tooltip=&quot;This is the tip&quot;&gt;
+            Button with left tooltip
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row space-between&quot;&gt;
+    &lt;div&gt;
+        &lt;button class=&quot;tooltip-right&quot; data-tooltip=&quot;This is the tip&quot;&gt;
+            Button with right tooltip
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;button class=&quot;tooltip-bottom&quot; data-tooltip=&quot;This is the tip&quot;&gt;
+            Button with bottom tooltip
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div></div></div>
+<div class=acc><div><input type="checkbox" id="css-tooltip" hidden><label class="color-default" for="css-tooltip">View CSS</label><div>
+<pre><code class="css">[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::before,
+[data-tooltip]::after {
+  position: absolute;
+  display: block;
+  bottom: 100%;
+  left: 50%;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity .2s, transform .2s;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  border-radius: var(--rad);
+  background: var(--c-f1);
+  color: var(--c-b1);
+  font-size: .7rem;
+  white-space: pre;
+  padding: .3rem .5rem;
+  transform: translate(-50%, -.6rem);
+}
+
+[data-tooltip]::before {
+  content: &quot;&quot;;
+  border-style: solid;
+  border-width: .7rem 1rem 0 1rem;
+  border-color: var(--c-f1) transparent transparent transparent;
+  transform: translate(-50%, 0);
+}
+
+.tooltip-right::after {
+  bottom: 50%;
+  right: -.6rem;
+  transform: translate(100%, 50%);
+}
+
+.tooltip-right::before {
+  bottom: 50%;
+  right: 0;
+  border-width: .5rem .7rem .5rem 0;
+  border-color: transparent var(--c-f1) transparent transparent;
+  transform: translate(.78rem, 50%);
+}
+
+.tooltip-left::after {
+  bottom: 50%;
+  left: -.5rem;
+  transform: translate(-100%, 50%);
+}
+
+.tooltip-left::before {
+  bottom: 50%;
+  left: 0;
+  border-width: .5rem 0 .5rem .7rem;
+  border-color: transparent transparent transparent var(--c-f1);
+  transform: translate(-.7rem, 50%);
+}
+
+.tooltip-bottom::after {
+  bottom: 0;
+  transform: translate(-50%, 2rem);
+}
+
+.tooltip-bottom::before {
+  top: 100%;
+  border-width: 0 1rem .7rem 1rem;
+  border-color: transparent transparent var(--c-f1) transparent;
+}
+
+[data-tooltip]:focus::after,
+[data-tooltip]:hover::after,
+[data-tooltip]:focus::before,
+[data-tooltip]:hover::before {
+  opacity: 1;
+}</code></pre>
+</div></div></div></div>
+</article>
+<article id="dark">
+<h2 id="dark-mode">Dark mode</h2>
+<!-- 
+Needs to be placed directly in the body tag
+<input id="dark-mode" class="dark-mode-checkbox" type="checkbox" hidden> 
+-->
+<p>
+    <span class="button color-2">
+        <label class="dark-mode-label" for="dark-mode"> mode</label>
+    </span>
+</p>
+
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-dark" hidden><label class="color-default" for="html-dark">View HTML</label><div>
+<pre><code class="html">&lt;h2 id=&quot;dark-mode&quot;&gt;Dark mode&lt;/h2&gt;
+&lt;!-- 
+Needs to be placed directly in the body tag
+&lt;input id=&quot;dark-mode&quot; class=&quot;dark-mode-checkbox&quot; type=&quot;checkbox&quot; hidden&gt; 
+--&gt;
+&lt;p&gt;
+    &lt;span class=&quot;button color-2&quot;&gt;
+        &lt;label class=&quot;dark-mode-label&quot; for=&quot;dark-mode&quot;&gt; mode&lt;/label&gt;
+    &lt;/span&gt;
+&lt;/p&gt;</code></pre>
+</div></div></div>
+<div class=acc><div><input type="checkbox" id="css-dark" hidden><label class="color-default" for="css-dark">View CSS</label><div>
+<pre><code class="css">.dark-mode-checkbox:checked ~ * {
+  --c-b2: #303742;
+  --c-b1: #66758c;
+  --c-f1: #d8d7d7;
+  --c-f2: #f7f8f9;
+  --c-2: #8b7b98;
+  --c-bg: var(--c-b2);
+  --c-h: var(--c-1);
+  --c-a: var(--c-1);
+  --sh: 0 .25rem 1rem rgba(148, 157, 165, .27);
+}
+
+.dark-mode-label {
+  content: &quot;Dark&quot;;
+}
+
+.dark-mode-label::before {
+  content: &quot;\2610  Light&quot;;
+}
+
+.dark-mode-checkbox:checked ~ * .dark-mode-label::before {
+  content: &quot;\2611  Dark&quot;;
+}</code></pre>
+</div></div></div></div>
+</article>
+</section>
+<section>
+<article id="alert">
 <h2 id="alerts">Alerts</h2>
 <div class="alert">
     <input type="checkbox" id="alert1"/>
@@ -328,8 +989,9 @@ func main() {
     <label for="alert6"><!----></label>
     <span>Important Mesasge with secondary color</span>
 </div>
-<div class=acc><div><input type="checkbox" id="code-alert" hidden><label class="color-default" for="code-alert">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;h2 id=&quot;alerts&quot;&gt;Alerts&lt;/h2&gt;
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-alert" hidden><label class="color-default" for="html-alert">View HTML</label><div>
+<pre><code class="html">&lt;h2 id=&quot;alerts&quot;&gt;Alerts&lt;/h2&gt;
 &lt;div class=&quot;alert&quot;&gt;
     &lt;input type=&quot;checkbox&quot; id=&quot;alert1&quot;/&gt;
     &lt;label for=&quot;alert1&quot;&gt;&lt;!----&gt;&lt;/label&gt;
@@ -360,16 +1022,86 @@ func main() {
     &lt;input type=&quot;checkbox&quot; id=&quot;alert6&quot;/&gt;
     &lt;label for=&quot;alert6&quot;&gt;&lt;!----&gt;&lt;/label&gt;
     &lt;span&gt;Important Mesasge with secondary color&lt;/span&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;</code></pre>
 </div></div></div>
-</article>
-<article>
-<article>
-<h2>Toasts</h2>
-<p>They appear at the bottom right and close automatically</p>
+<div class=acc><div><input type="checkbox" id="css-alert" hidden><label class="color-default" for="css-alert">View CSS</label><div>
+<pre><code class="css">.alert {
+  width: 100%;
+  background-color: var(--c-b1);
+  display: block;
+  border-radius: var(--rad);
+  box-shadow: var(--sh);
+  animation-timing-function: ease;
+  margin-top: 1rem;
+}
 
-<div class=acc><div><input type="checkbox" id="code-toast" hidden><label class="color-default" for="code-toast">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;!--This should be placed at the start of the document--&gt;
+.alert &gt; input {
+  display: none;
+}
+
+.alert &gt; span {
+  display: block;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.alert &gt; label {
+  float: right;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.alert &gt; label::before {
+  content: &quot;\2715&quot;;
+  margin-left: .5rem;
+}
+
+.close {
+  animation-name: dismiss;
+  animation-delay: 5s;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+.in-10 {
+  animation-delay: 10s;
+}
+
+.in-20 {
+  animation-delay: 20s;
+}
+
+.alert input:checked ~ * {
+  animation-name: dismiss;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dismiss {
+  100% {
+    opacity: 0%;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+}</code></pre>
+</div></div></div></div>
+</article>
+</section>
+
+<section>
+<article id="toasts">
+<h2>Toasts</h2>
+<p>They appear in a specified corner using one of the classes <code>right bottom</code>, <code>right top</code>, <code>left bottom</code> or <code>left top</code>.</p>
+<p>Usage of the optional classes <code>close in-10</code> will autoclose the toast.</p>
+
+
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-toast" hidden><label class="color-default" for="html-toast">View HTML</label><div>
+<pre><code class="html">&lt;!--This should be placed at the start of the document--&gt;
 &lt;div class=&quot;toasts right bottom&quot;&gt;
     &lt;div class=&quot;alert ok close&quot;&gt;
         &lt;input type=&quot;checkbox&quot; id=&quot;toast1&quot;/&gt;
@@ -381,14 +1113,51 @@ func main() {
         &lt;label for=&quot;toast2&quot;&gt;&lt;!--x--&gt;&lt;/label&gt;
         &lt;span&gt;This is a warning autoclosable Toast after 10 seconds&lt;/span&gt;
     &lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;</code></pre>
 </div></div></div>
+<div class=acc><div><input type="checkbox" id="css-toast" hidden><label class="color-default" for="css-toast">View CSS</label><div>
+<pre><code class="css">div.toasts {
+  position: fixed;
+  display: flex;
+  flex-flow: column-reverse;
+  z-index: 2;
+  width: 25%;
+  max-width: 30%;
+}
+
+div.toasts &gt; * {
+  margin-bottom: 1rem;
+}
+
+.toasts.top {
+  top: 2rem;
+}
+
+.toasts.bottom {
+  bottom: 2rem;
+}
+
+.toasts.left {
+  left: 2rem;
+}
+
+.toasts.right {
+  right: 2rem;
+}
+
+.toasts &gt; .alert {
+  box-shadow: 10px 18px 41px -5px rgba(0, 0, 0, .75);
+}</code></pre>
+</div></div></div></div>
 </article>
-<article>
+</section>
+<section>
+<article id="modal">
  <h2 id="modals">Modals</h2>
  <p>
-     <label for="modal-1"><span class="ok button">Open Modal</span></label>
-     <button class="ok">Open Modal</button>
+    <label for="modal-1">
+        <span class="ok button">Open Modal</span>
+    </label>
  </p>
 
 
@@ -398,17 +1167,24 @@ func main() {
         <div class="content">
             <h2>This is a modal</h2>
             <p>
-                Lorem ipsum dolor sit amet, consetetur....
+                Lorem ipsum dolor sit amet, 
+                consetetur....
             </p>
-            <label for="modal-1" class="right"><span class="err button">Close Modal</span></label>
+            <label for="modal-1" class="right">
+                <span class="err button">
+                    Close Modal
+                </span>
+            </label>
         </div>    
     </div>
 </div>
-<div class=acc><div><input type="checkbox" id="code-modal" hidden><label class="color-default" for="code-modal">View source</label><div>
-<pre class="code" data-lang="HTML"> &lt;h2 id=&quot;modals&quot;&gt;Modals&lt;/h2&gt;
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-modal" hidden><label class="color-default" for="html-modal">View HTML</label><div>
+<pre><code class="html"> &lt;h2 id=&quot;modals&quot;&gt;Modals&lt;/h2&gt;
  &lt;p&gt;
-     &lt;label for=&quot;modal-1&quot;&gt;&lt;span class=&quot;ok button&quot;&gt;Open Modal&lt;/span&gt;&lt;/label&gt;
-     &lt;button class=&quot;ok&quot;&gt;Open Modal&lt;/button&gt;
+    &lt;label for=&quot;modal-1&quot;&gt;
+        &lt;span class=&quot;ok button&quot;&gt;Open Modal&lt;/span&gt;
+    &lt;/label&gt;
  &lt;/p&gt;
 
 
@@ -418,75 +1194,76 @@ func main() {
         &lt;div class=&quot;content&quot;&gt;
             &lt;h2&gt;This is a modal&lt;/h2&gt;
             &lt;p&gt;
-                Lorem ipsum dolor sit amet, consetetur....
+                Lorem ipsum dolor sit amet, 
+                consetetur....
             &lt;/p&gt;
-            &lt;label for=&quot;modal-1&quot; class=&quot;right&quot;&gt;&lt;span class=&quot;err button&quot;&gt;Close Modal&lt;/span&gt;&lt;/label&gt;
+            &lt;label for=&quot;modal-1&quot; class=&quot;right&quot;&gt;
+                &lt;span class=&quot;err button&quot;&gt;
+                    Close Modal
+                &lt;/span&gt;
+            &lt;/label&gt;
         &lt;/div&gt;    
     &lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;</code></pre>
 </div></div></div>
-</article>
-</article>
+<div class=acc><div><input type="checkbox" id="css-modal" hidden><label class="color-default" for="css-modal">View CSS</label><div>
+<pre><code class="css">.modal &gt; .overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(160, 160, 160, .843);
+  z-index: 10;
+}
 
+.modal &gt; input:first-child:checked ~ .overlay .content {
+  opacity: 1;
+  background-color: var(--c-b2);
+  margin: auto 22%;
+  padding: 2rem;
+  border-radius: var(--rad);
+  box-shadow: -7px 40px 298px 200px rgba(66, 66, 66, 1);
+}
+
+.modal &gt; input:first-child {
+  display: none;
+}
+
+.modal &gt; input:first-child:checked ~ .overlay {
+  display: flex;
+  transition: opacity .2s ease-in;
+}
+
+span.button {
+  border-radius: var(--rad);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: .7rem 1rem;
+  font-size: .87rem;
+  text-align: center;
+  margin: .15rem;
+  border: 2px solid transparent;
+  box-shadow: var(--sh);
+}
+
+span.button:hover {
+  filter: brightness(120%);
+}</code></pre>
+</div></div></div></div>
+</article>
 </section>
 <section>
-<article>
-<h2 id="tooltips">Tooltips</h2>
-<section style="--margin: 6rem;">
-    <div>
-        <button class="tooltip-top" data-tooltip="This is the tip">Button with top tooltip</button>
-    </div>
-    <div>
-        <button class="tooltip-left" data-tooltip="This is the tip">Button with left tooltip</button>
-    </div>
-    <div>
-        <button class="tooltip-right" data-tooltip="This is the tip">Button with right tooltip</button>
-    </div>
-    <div>
-        <button class="tooltip-bottom" data-tooltip="This is the tip">Button with bottom tooltip</button>
-    </div>
-</section>
+<article id="accordion">
+<h2 id="accordion">Accordion</h2>
 
-<div class=acc><div><input type="checkbox" id="code-tooltip" hidden><label class="color-default" for="code-tooltip">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;h2 id=&quot;tooltips&quot;&gt;Tooltips&lt;/h2&gt;
-&lt;section style=&quot;--margin: 6rem;&quot;&gt;
-    &lt;div&gt;
-        &lt;button class=&quot;tooltip-top&quot; data-tooltip=&quot;This is the tip&quot;&gt;Button with top tooltip&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;button class=&quot;tooltip-left&quot; data-tooltip=&quot;This is the tip&quot;&gt;Button with left tooltip&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;button class=&quot;tooltip-right&quot; data-tooltip=&quot;This is the tip&quot;&gt;Button with right tooltip&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;button class=&quot;tooltip-bottom&quot; data-tooltip=&quot;This is the tip&quot;&gt;Button with bottom tooltip&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/section&gt;</pre>
-</div></div></div>
-</article>
-<article>
-<h2 id="dark-mode">Dark mode</h2>
-<!-- Needs to be placed directly in the body tag -->
-<!--<input id="dark-mode" class="dark-mode-checkbox" type="checkbox" hidden>-->
-<p>
-    <span class="button color-2"><label class="dark-mode-label" for="dark-mode"> mode</label></span>
+<p>If you need mutual exclusive accordions, just swap 
+  <code>type="checkbox"</code> with 
+  <code>type="radio" name="somename"</code>.
 </p>
 
-<div class=acc><div><input type="checkbox" id="code-dark" hidden><label class="color-default" for="code-dark">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;h2 id=&quot;dark-mode&quot;&gt;Dark mode&lt;/h2&gt;
-&lt;!-- Needs to be placed directly in the body tag --&gt;
-&lt;!--&lt;input id=&quot;dark-mode&quot; class=&quot;dark-mode-checkbox&quot; type=&quot;checkbox&quot; hidden&gt;--&gt;
-&lt;p&gt;
-    &lt;span class=&quot;button color-2&quot;&gt;&lt;label class=&quot;dark-mode-label&quot; for=&quot;dark-mode&quot;&gt; mode&lt;/label&gt;&lt;/span&gt;
-&lt;/p&gt;</pre>
-</div></div></div>
-</article>
-</section>
-
-<section>
-<article>
-<h2 id="accordion">Accordion</h2>
 <div class="acc">
     <div>
       <input type="checkbox" id="acc1" hidden>
@@ -554,8 +1331,15 @@ func main() {
     </div>
   </div>
 </div>
-<div class=acc><div><input type="checkbox" id="code-accordion" hidden><label class="color-default" for="code-accordion">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;h2 id=&quot;accordion&quot;&gt;Accordion&lt;/h2&gt;
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-accordion" hidden><label class="color-default" for="html-accordion">View HTML</label><div>
+<pre><code class="html">&lt;h2 id=&quot;accordion&quot;&gt;Accordion&lt;/h2&gt;
+
+&lt;p&gt;If you need mutual exclusive accordions, just swap 
+  &lt;code&gt;type=&quot;checkbox&quot;&lt;/code&gt; with 
+  &lt;code&gt;type=&quot;radio&quot; name=&quot;somename&quot;&lt;/code&gt;.
+&lt;/p&gt;
+
 &lt;div class=&quot;acc&quot;&gt;
     &lt;div&gt;
       &lt;input type=&quot;checkbox&quot; id=&quot;acc1&quot; hidden&gt;
@@ -622,151 +1406,289 @@ func main() {
       Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;</code></pre>
 </div></div></div>
-</article>
-<article>
-<h2 id="tabs">Tabs</h2>
-<div class="tab">
-    <div>
-        <label class="ok" for="t1">Item 1</label>
-        <label class="wrg" for="t2">Item 2</label>
-        <label class="err" for="t3">Item 3</label>
-        <label class="color-1" for="t4">Item 4</label>
-        <label class="color-2" for="t5">Item 5</label>
-    </div>
-    <input type="radio" id="t1" name="tab" checked hidden>
-    <input type="radio" id="t2" name="tab" hidden>
-    <input type="radio" id="t3" name="tab" hidden>
-    <input type="radio" id="t4" name="tab" hidden>
-    <input type="radio" id="t5" name="tab" hidden>
-    <div class="t1">
-        <h2>Tab 1 Content</h2>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    </div>
-    <div class="t2">
-        <h2>Tab 2 Content</h2>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    </div>
-    <div class="t3">
-        <h2>Tab 3 Content</h2>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    </div>
-    <div class="t4">
-        <h2>Tab 4 Content</h2>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    </div>
-    <div class="t5">
-        <h2>Tab 5 Content</h2>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    </div>
-</div>
-<div class=acc><div><input type="checkbox" id="code-tab" hidden><label class="color-default" for="code-tab">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;h2 id=&quot;tabs&quot;&gt;Tabs&lt;/h2&gt;
-&lt;div class=&quot;tab&quot;&gt;
-    &lt;div&gt;
-        &lt;label class=&quot;ok&quot; for=&quot;t1&quot;&gt;Item 1&lt;/label&gt;
-        &lt;label class=&quot;wrg&quot; for=&quot;t2&quot;&gt;Item 2&lt;/label&gt;
-        &lt;label class=&quot;err&quot; for=&quot;t3&quot;&gt;Item 3&lt;/label&gt;
-        &lt;label class=&quot;color-1&quot; for=&quot;t4&quot;&gt;Item 4&lt;/label&gt;
-        &lt;label class=&quot;color-2&quot; for=&quot;t5&quot;&gt;Item 5&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;t1&quot; name=&quot;tab&quot; checked hidden&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;t2&quot; name=&quot;tab&quot; hidden&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;t3&quot; name=&quot;tab&quot; hidden&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;t4&quot; name=&quot;tab&quot; hidden&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;t5&quot; name=&quot;tab&quot; hidden&gt;
-    &lt;div class=&quot;t1&quot;&gt;
-        &lt;h2&gt;Tab 1 Content&lt;/h2&gt;
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    &lt;/div&gt;
-    &lt;div class=&quot;t2&quot;&gt;
-        &lt;h2&gt;Tab 2 Content&lt;/h2&gt;
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    &lt;/div&gt;
-    &lt;div class=&quot;t3&quot;&gt;
-        &lt;h2&gt;Tab 3 Content&lt;/h2&gt;
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    &lt;/div&gt;
-    &lt;div class=&quot;t4&quot;&gt;
-        &lt;h2&gt;Tab 4 Content&lt;/h2&gt;
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    &lt;/div&gt;
-    &lt;div class=&quot;t5&quot;&gt;
-        &lt;h2&gt;Tab 5 Content&lt;/h2&gt;
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-</div></div></div>
+<div class=acc><div><input type="checkbox" id="css-accordion" hidden><label class="color-default" for="css-accordion">View CSS</label><div>
+<pre><code class="css">.acc {
+  border-radius: var(--rad);
+  overflow: hidden;
+}
+
+.acc &gt; div {
+  overflow: hidden;
+}
+
+.acc &gt; div &gt; label {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem;
+  cursor: pointer;
+}
+
+.acc &gt; div &gt; label::after {
+  content: &quot;\276F&quot;;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  transform: rotate(90deg);
+  transition: all .35s;
+}
+
+.acc &gt; div &gt; div {
+  max-height: 0;
+  transition: all .35s;
+  overflow: auto;
+}
+
+.acc &gt; div &gt; input:checked + label::after {
+  transform: rotate(-90deg);
+}
+
+.acc &gt; div &gt; input:checked ~ * {
+  max-height: 100vh;
+}
+
+.acc &gt; div &gt; input:checked ~ div {
+  border: 2px solid var(--c-b1);
+  border-radius: 0 0 var(--rad) var(--rad);
+}</code></pre>
+</div></div></div></div>
 </article>
 </section>
+<section>
+<article id="tab">
+<h2 id="tabs">Tabs</h2>
+<p>
+  <span class="label wrg">Warning</span>
+  This tabs implementation has limitations. 
+</p><p>
+  Tabs have pre-defined fixed IDs 
+  <code>t1,t2,t3,t4,t5</code> by deafult.
+  However, they can be quickly changed in 
+  <a href="src/tab.css">src/tab.css</a>.<br>
+  Alternatievly you can use JavaScript for the 
+  tab switching and just grab the styling.
+</p>
 
-<h2 id="tables">Tables</h2>
-<article>
+<div class="tab">
+  <div>
+    <label class="ok" for="t1">Item 1</label>
+    <label class="wrg" for="t2">Item 2</label>
+    <label class="err" for="t3">Item 3</label>
+    <label class="color-1" for="t4">Item 4</label>
+    <label class="color-2" for="t5">Item 5</label>
+  </div>
+  <input type="radio" id="t1" name="tab" checked hidden>
+  <input type="radio" id="t2" name="tab" hidden>
+  <input type="radio" id="t3" name="tab" hidden>
+  <input type="radio" id="t4" name="tab" hidden>
+  <input type="radio" id="t5" name="tab" hidden>
+  <div class="t1">
+    <h3>Tab 1 Content</h3>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua. 
+  </div>
+  <div class="t2">
+    <h3>Tab 2 Content</h3>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+  </div>
+  <div class="t3">
+    <h3>Tab 3 Content</h3>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+  </div>
+  <div class="t4">
+    <h3>Tab 4 Content</h3>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+  </div>
+  <div class="t5">
+    <h3>Tab 5 Content</h3>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+  </div>
+</div>
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-tab" hidden><label class="color-default" for="html-tab">View HTML</label><div>
+<pre><code class="html">&lt;h2 id=&quot;tabs&quot;&gt;Tabs&lt;/h2&gt;
+&lt;p&gt;
+  &lt;span class=&quot;label wrg&quot;&gt;Warning&lt;/span&gt;
+  This tabs implementation has limitations. 
+&lt;/p&gt;&lt;p&gt;
+  Tabs have pre-defined fixed IDs 
+  &lt;code&gt;t1,t2,t3,t4,t5&lt;/code&gt; by deafult.
+  However, they can be quickly changed in 
+  &lt;a href=&quot;src/tab.css&quot;&gt;src/tab.css&lt;/a&gt;.&lt;br&gt;
+  Alternatievly you can use JavaScript for the 
+  tab switching and just grab the styling.
+&lt;/p&gt;
+
+&lt;div class=&quot;tab&quot;&gt;
+  &lt;div&gt;
+    &lt;label class=&quot;ok&quot; for=&quot;t1&quot;&gt;Item 1&lt;/label&gt;
+    &lt;label class=&quot;wrg&quot; for=&quot;t2&quot;&gt;Item 2&lt;/label&gt;
+    &lt;label class=&quot;err&quot; for=&quot;t3&quot;&gt;Item 3&lt;/label&gt;
+    &lt;label class=&quot;color-1&quot; for=&quot;t4&quot;&gt;Item 4&lt;/label&gt;
+    &lt;label class=&quot;color-2&quot; for=&quot;t5&quot;&gt;Item 5&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;t1&quot; name=&quot;tab&quot; checked hidden&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;t2&quot; name=&quot;tab&quot; hidden&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;t3&quot; name=&quot;tab&quot; hidden&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;t4&quot; name=&quot;tab&quot; hidden&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;t5&quot; name=&quot;tab&quot; hidden&gt;
+  &lt;div class=&quot;t1&quot;&gt;
+    &lt;h3&gt;Tab 1 Content&lt;/h3&gt;
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua. 
+  &lt;/div&gt;
+  &lt;div class=&quot;t2&quot;&gt;
+    &lt;h3&gt;Tab 2 Content&lt;/h3&gt;
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+  &lt;/div&gt;
+  &lt;div class=&quot;t3&quot;&gt;
+    &lt;h3&gt;Tab 3 Content&lt;/h3&gt;
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+  &lt;/div&gt;
+  &lt;div class=&quot;t4&quot;&gt;
+    &lt;h3&gt;Tab 4 Content&lt;/h3&gt;
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+  &lt;/div&gt;
+  &lt;div class=&quot;t5&quot;&gt;
+    &lt;h3&gt;Tab 5 Content&lt;/h3&gt;
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+    magna aliquyam erat, sed diam voluptua.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div></div></div>
+<div class=acc><div><input type="checkbox" id="css-tab" hidden><label class="color-default" for="css-tab">View CSS</label><div>
+<pre><code class="css">.tab {
+  display: flex;
+  flex-flow: column;
+}
+
+.tab &gt; div:first-child {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tab &gt; div:first-child &gt; * {
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.tab label {
+  padding: .5rem 2rem;
+  border-radius: var(--rad) var(--rad) 0 0;
+  cursor: pointer;
+}
+
+.tab label:hover {
+  filter: brightness(110%);
+}
+
+.tab &gt; div:not(:first-child) {
+  max-height: 0;
+  opacity: 0;
+  transition: opacity .25s;
+  overflow: hidden;
+}
+
+/** Add more tabs here if required **/
+#t1:checked ~ .t1,
+#t2:checked ~ .t2,
+#t3:checked ~ .t3,
+#t4:checked ~ .t4,
+#t5:checked ~ .t5 {
+  max-height: 100vh;
+  border: .1rem solid var(--c-b1);
+  padding: 1rem;
+  opacity: 1;
+  border-radius: 0 0 var(--rad) var(--rad);
+  box-shadow: var(--sh);
+}</code></pre>
+</div></div></div></div>
+</article>
+</section>
 <section>
-<section>
+<article id="table">
+<h2>Tables</h2>      
+<div class="row space-around">
 <article>
-    <h2>Default table</h2>
+    <h3>Default table</h3>    
     <table class="color-default">
         <thead>
             <tr>
@@ -777,9 +1699,6 @@ func main() {
             <tr><td>Data 1</td><td colspan="2">Data 2</td></tr>
             <tr><td colspan="2">Data 1</td><td>Data 2</td></tr>
             <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-            <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-            <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-            <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
         </tbody>
         <tfoot>
             <tr><td colspan="3">Summary of the table</td></tr>
@@ -787,7 +1706,7 @@ func main() {
     </table>
 </article>
 <article>
-<h2>Color 1 Table</h2>
+<h3>Color 1 Table</h3>
 <table class="color-1">
     <thead>
         <tr>
@@ -798,19 +1717,14 @@ func main() {
         <tr class="odd"><td>Data 1</td><td colspan="2">Data 2</td></tr>
         <tr><td colspan="2">Data 1</td><td>Data 2</td></tr>
         <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-        <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-        <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-        <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
     </tbody>
     <tfoot>
         <tr><td colspan="3">Summary of the table</td></tr>
     </tfoot>
 </table>
 </article>
-</section>
-<section>
 <article>
-<h2>Color 2 Table</h2>
+<h3>Color 2 Table</h3>
 <table class="color-2">
     <thead>
         <tr>
@@ -821,9 +1735,6 @@ func main() {
         <tr class="odd"><td>Data 1</td><td colspan="2">Data 2</td></tr>
         <tr><td colspan="2">Data 1</td><td>Data 2</td></tr>
         <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-        <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-        <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-        <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
     </tbody>
     <tfoot>
         <tr><td colspan="3">Summary of the table</td></tr>
@@ -831,7 +1742,7 @@ func main() {
 </table>
 </article>
 <article>
-<h2>ok Table</h2>
+<h3>ok Table</h3>
 <table class="ok">
     <thead>
         <tr>
@@ -842,19 +1753,14 @@ func main() {
         <tr class="odd"><td>Data 1</td><td colspan="2">Data 2</td></tr>
         <tr><td colspan="2">Data 1</td><td>Data 2</td></tr>
         <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-        <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-        <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-        <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
     </tbody>
     <tfoot>
         <tr><td colspan="3">Summary of the table</td></tr>
     </tfoot>
 </table>
 </article>
-</section>
-<section>
 <article>
-<h2>err Table</h2>
+<h3>err Table</h3>
 <table class="err">
     <thead>
         <tr>
@@ -865,9 +1771,6 @@ func main() {
         <tr class="odd"><td>Data 1</td><td colspan="2">Data 2</td></tr>
         <tr><td colspan="2">Data 1</td><td>Data 2</td></tr>
         <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-        <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-        <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-        <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
     </tbody>
     <tfoot>
         <tr><td colspan="3">Summary of the table</td></tr>
@@ -875,7 +1778,7 @@ func main() {
 </table>
 </article>
 <article>
-<h2>wrg Table</h2>
+<h3>wrg Table</h3>
 <table class="wrg">
     <thead>
         <tr>
@@ -886,23 +1789,19 @@ func main() {
         <tr class="odd"><td>Data 1</td><td colspan="2">Data 2</td></tr>
         <tr><td colspan="2">Data 1</td><td>Data 2</td></tr>
         <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-        <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-        <tr class="odd"><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-        <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
     </tbody>
     <tfoot>
         <tr><td colspan="3">Summary of the table</td></tr>
     </tfoot>
 </table>
 </article>
-</section></section>
-
-
-
-<div class=acc><div><input type="checkbox" id="code-table" hidden><label class="color-default" for="code-table">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;section&gt;
+</div>
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-table" hidden><label class="color-default" for="html-table">View HTML</label><div>
+<pre><code class="html">&lt;h2&gt;Tables&lt;/h2&gt;      
+&lt;div class=&quot;row space-around&quot;&gt;
 &lt;article&gt;
-    &lt;h2&gt;Default table&lt;/h2&gt;
+    &lt;h3&gt;Default table&lt;/h3&gt;    
     &lt;table class=&quot;color-default&quot;&gt;
         &lt;thead&gt;
             &lt;tr&gt;
@@ -913,9 +1812,6 @@ func main() {
             &lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;Data 2&lt;/td&gt;&lt;/tr&gt;
             &lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;/tr&gt;
             &lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-            &lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-            &lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-            &lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
         &lt;/tbody&gt;
         &lt;tfoot&gt;
             &lt;tr&gt;&lt;td colspan=&quot;3&quot;&gt;Summary of the table&lt;/td&gt;&lt;/tr&gt;
@@ -923,7 +1819,7 @@ func main() {
     &lt;/table&gt;
 &lt;/article&gt;
 &lt;article&gt;
-&lt;h2&gt;Color 1 Table&lt;/h2&gt;
+&lt;h3&gt;Color 1 Table&lt;/h3&gt;
 &lt;table class=&quot;color-1&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
@@ -934,19 +1830,14 @@ func main() {
         &lt;tr class=&quot;odd&quot;&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;Data 2&lt;/td&gt;&lt;/tr&gt;
         &lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;/tr&gt;
         &lt;tr class=&quot;odd&quot;&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr class=&quot;odd&quot;&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
     &lt;/tbody&gt;
     &lt;tfoot&gt;
         &lt;tr&gt;&lt;td colspan=&quot;3&quot;&gt;Summary of the table&lt;/td&gt;&lt;/tr&gt;
     &lt;/tfoot&gt;
 &lt;/table&gt;
 &lt;/article&gt;
-&lt;/section&gt;
-&lt;section&gt;
 &lt;article&gt;
-&lt;h2&gt;Color 2 Table&lt;/h2&gt;
+&lt;h3&gt;Color 2 Table&lt;/h3&gt;
 &lt;table class=&quot;color-2&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
@@ -957,9 +1848,6 @@ func main() {
         &lt;tr class=&quot;odd&quot;&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;Data 2&lt;/td&gt;&lt;/tr&gt;
         &lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;/tr&gt;
         &lt;tr class=&quot;odd&quot;&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr class=&quot;odd&quot;&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
     &lt;/tbody&gt;
     &lt;tfoot&gt;
         &lt;tr&gt;&lt;td colspan=&quot;3&quot;&gt;Summary of the table&lt;/td&gt;&lt;/tr&gt;
@@ -967,7 +1855,7 @@ func main() {
 &lt;/table&gt;
 &lt;/article&gt;
 &lt;article&gt;
-&lt;h2&gt;ok Table&lt;/h2&gt;
+&lt;h3&gt;ok Table&lt;/h3&gt;
 &lt;table class=&quot;ok&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
@@ -978,19 +1866,14 @@ func main() {
         &lt;tr class=&quot;odd&quot;&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;Data 2&lt;/td&gt;&lt;/tr&gt;
         &lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;/tr&gt;
         &lt;tr class=&quot;odd&quot;&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr class=&quot;odd&quot;&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
     &lt;/tbody&gt;
     &lt;tfoot&gt;
         &lt;tr&gt;&lt;td colspan=&quot;3&quot;&gt;Summary of the table&lt;/td&gt;&lt;/tr&gt;
     &lt;/tfoot&gt;
 &lt;/table&gt;
 &lt;/article&gt;
-&lt;/section&gt;
-&lt;section&gt;
 &lt;article&gt;
-&lt;h2&gt;err Table&lt;/h2&gt;
+&lt;h3&gt;err Table&lt;/h3&gt;
 &lt;table class=&quot;err&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
@@ -1001,9 +1884,6 @@ func main() {
         &lt;tr class=&quot;odd&quot;&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;Data 2&lt;/td&gt;&lt;/tr&gt;
         &lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;/tr&gt;
         &lt;tr class=&quot;odd&quot;&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr class=&quot;odd&quot;&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
     &lt;/tbody&gt;
     &lt;tfoot&gt;
         &lt;tr&gt;&lt;td colspan=&quot;3&quot;&gt;Summary of the table&lt;/td&gt;&lt;/tr&gt;
@@ -1011,7 +1891,7 @@ func main() {
 &lt;/table&gt;
 &lt;/article&gt;
 &lt;article&gt;
-&lt;h2&gt;wrg Table&lt;/h2&gt;
+&lt;h3&gt;wrg Table&lt;/h3&gt;
 &lt;table class=&quot;wrg&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
@@ -1022,184 +1902,723 @@ func main() {
         &lt;tr class=&quot;odd&quot;&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;Data 2&lt;/td&gt;&lt;/tr&gt;
         &lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;/tr&gt;
         &lt;tr class=&quot;odd&quot;&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr class=&quot;odd&quot;&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;&lt;td&gt;Data 3&lt;/td&gt;&lt;/tr&gt;
     &lt;/tbody&gt;
     &lt;tfoot&gt;
         &lt;tr&gt;&lt;td colspan=&quot;3&quot;&gt;Summary of the table&lt;/td&gt;&lt;/tr&gt;
     &lt;/tfoot&gt;
 &lt;/table&gt;
 &lt;/article&gt;
-&lt;/section&gt;</pre>
+&lt;/div&gt;</code></pre>
 </div></div></div>
+<div class=acc><div><input type="checkbox" id="css-table" hidden><label class="color-default" for="css-table">View CSS</label><div>
+<pre><code class="css">table &gt; thead &gt; *,
+table &gt; tfoot &gt; * {
+  text-align: center;
+}
 
+table {
+  margin-bottom: 3rem;
+  border-spacing: 0;
+  border-radius: var(--rad);
+  box-shadow: var(--sh);
+}
 
+tfoot td {
+  text-align: center;
+  padding: 1.2rem 1.5rem;
+}
 
+tbody td,
+thead th {
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+  border-bottom: .1rem solid var(--c-b1);
+}
+
+tbody &gt; tr:not(.odd) {
+  background-color: var(--c-b2);
+  color: var(--c-f1);
+}
+
+tbody &gt; tr.odd {
+  background-color: var(--c-b1);
+  color: var(--c-f1);
+}
+
+tbody &gt; tr:hover,
+tfoot {
+  font-weight: bold;
+}
+
+td:first-child,
+th:first-child {
+  padding-left: 2rem;
+}
+
+td:last-child,
+th:last-child {
+  padding-right: 2rem;
+}</code></pre>
+</div></div></div></div>
 </article>
-
+</section>
 <section>
-<article>
-<h2 id="cards">Cards</h2>
-<section class="three">
-    <div class="card" data-header="Default card">
+<article id="card">
+<h2>Cards</h2>
+<div class="row space-around">
+    <div class="card">
         <span>Default card</span>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
-eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        <span class="meta">Date: today</span>
+        Lorem ipsum dolor sit amet
+        <span class="meta right">
+            Date: today
+        </span>
     </div>
-    <div class="card ok" data-header="ok card">
-        <span>ok card</span>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
-eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        <span class="meta">Date: today</span>
+    <div class="card ok">
+        <span>OK card</span>
+        Lorem ipsum dolor sit amet
+        <span class="meta right">
+            Date: today
+        </span>
     </div>
-    <div class="card wrg" data-header="wrg card">
-        <span>wrg card</span>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
-eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        <span class="meta">Date: today</span>
+    <div class="card wrg">
+        <span>Warning card</span>
+        Lorem ipsum dolor sit amet
+        <span class="meta right">
+            Date: today
+        </span>
     </div>
-    <div class="card err" data-header="err card">
-        <span>err card</span>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
-eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        <span class="meta">Date: today</span>
+    <div class="card err">
+        <span>Error card</span>
+        Lorem ipsum dolor sit amet
+        <span class="meta right">
+            Date: today
+        </span>
     </div>
-    <div class="card color-1" data-header="Color 1 card">
-        <span>Color 1 card</span>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
-eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        <span class="meta">Date: today</span>
+    <div class="card color-1">
+        <span>Color-1 card</span>
+        Lorem ipsum dolor sit amet
+        <span class="meta right">
+            Date: today
+        </span>
     </div>
-    <div class="card color-2" data-header="Color 2 card">
-        <span>Color 2 card</span>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
-eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        <span class="meta">Date: today</span>
+    <div class="card color-2">
+        <span>Color-2 card</span>
+        Lorem ipsum dolor sit amet
+        <span class="meta right">
+            Date: today
+        </span>
     </div>
-</section></article>
-</section>
-<section>
-<article>
-
-<div class=acc><div><input type="checkbox" id="code-card" hidden><label class="color-default" for="code-card">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;h2 id=&quot;cards&quot;&gt;Cards&lt;/h2&gt;
-&lt;section class=&quot;three&quot;&gt;
-    &lt;div class=&quot;card&quot; data-header=&quot;Default card&quot;&gt;
+</div>
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-card" hidden><label class="color-default" for="html-card">View HTML</label><div>
+<pre><code class="html">&lt;h2&gt;Cards&lt;/h2&gt;
+&lt;div class=&quot;row space-around&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;
         &lt;span&gt;Default card&lt;/span&gt;
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
-eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        &lt;span class=&quot;meta&quot;&gt;Date: today&lt;/span&gt;
+        Lorem ipsum dolor sit amet
+        &lt;span class=&quot;meta right&quot;&gt;
+            Date: today
+        &lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;card ok&quot; data-header=&quot;ok card&quot;&gt;
-        &lt;span&gt;ok card&lt;/span&gt;
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
-eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        &lt;span class=&quot;meta&quot;&gt;Date: today&lt;/span&gt;
+    &lt;div class=&quot;card ok&quot;&gt;
+        &lt;span&gt;OK card&lt;/span&gt;
+        Lorem ipsum dolor sit amet
+        &lt;span class=&quot;meta right&quot;&gt;
+            Date: today
+        &lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;card wrg&quot; data-header=&quot;wrg card&quot;&gt;
-        &lt;span&gt;wrg card&lt;/span&gt;
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
-eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        &lt;span class=&quot;meta&quot;&gt;Date: today&lt;/span&gt;
+    &lt;div class=&quot;card wrg&quot;&gt;
+        &lt;span&gt;Warning card&lt;/span&gt;
+        Lorem ipsum dolor sit amet
+        &lt;span class=&quot;meta right&quot;&gt;
+            Date: today
+        &lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;card err&quot; data-header=&quot;err card&quot;&gt;
-        &lt;span&gt;err card&lt;/span&gt;
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
-eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        &lt;span class=&quot;meta&quot;&gt;Date: today&lt;/span&gt;
+    &lt;div class=&quot;card err&quot;&gt;
+        &lt;span&gt;Error card&lt;/span&gt;
+        Lorem ipsum dolor sit amet
+        &lt;span class=&quot;meta right&quot;&gt;
+            Date: today
+        &lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;card color-1&quot; data-header=&quot;Color 1 card&quot;&gt;
-        &lt;span&gt;Color 1 card&lt;/span&gt;
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
-eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        &lt;span class=&quot;meta&quot;&gt;Date: today&lt;/span&gt;
+    &lt;div class=&quot;card color-1&quot;&gt;
+        &lt;span&gt;Color-1 card&lt;/span&gt;
+        Lorem ipsum dolor sit amet
+        &lt;span class=&quot;meta right&quot;&gt;
+            Date: today
+        &lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;card color-2&quot; data-header=&quot;Color 2 card&quot;&gt;
-        &lt;span&gt;Color 2 card&lt;/span&gt;
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
-eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        &lt;span class=&quot;meta&quot;&gt;Date: today&lt;/span&gt;
+    &lt;div class=&quot;card color-2&quot;&gt;
+        &lt;span&gt;Color-2 card&lt;/span&gt;
+        Lorem ipsum dolor sit amet
+        &lt;span class=&quot;meta right&quot;&gt;
+            Date: today
+        &lt;/span&gt;
     &lt;/div&gt;
-&lt;/section&gt;</pre>
+&lt;/div&gt;</code></pre>
 </div></div></div>
+<div class=acc><div><input type="checkbox" id="css-card" hidden><label class="color-default" for="css-card">View CSS</label><div>
+<pre><code class="css">.card {
+  border: 2px solid var(--c-f1);
+  display: flex;
+  flex-flow: column wrap;
+  border-radius: var(--rad);
+  background: var(--c-b1);
+  padding: 1rem 2rem;
+  box-shadow: var(--sh);
+}
+
+.card &gt; span:first-child {
+  font-size: 1.5rem;
+  padding-bottom: .5rem;
+}</code></pre>
+</div></div></div></div>
 </article>
 </section>
 
 <section>
-<h2>Footer</h2>
+<article id="form">
+<h2>Forms</h2>
+<article>
+    <form>
+        <fieldset>
+            <h3>Text-Input</h3>
+            <label><span>E-Mail</span><input type="email" placeholder="test@example.org"><span>After</span></label>
+            <label><span>Password</span><input type="password"></label>
+            <label><span>First name</span><input type="text"></label>
+            <label><input type="text"><span>Last name</span></label>
+            <div class="row">
+                <label><span>Street</span><input type="text"></label>
+                <label><input type="text"><span>City</span></label>
+            </div> 
+            
+            <span>Simple text input</span>
+            <input type="text" placeholder="Example text input"> 
+            <span>Text area</span>
+            <textarea></textarea>
+        </fieldset>
+        <div>
+            <button type="submit" class="ok">Submit</button>
+            <button type="reset" class="err">Reset</button>
+        </div>
+    </form>
+</article>
+    <article>
+        <form>
+            <fieldset>
+                <h2>Special input fields</h2>
+                <h3>File upload</h3>
+                <label>
+                    <span>File upload</span>
+                    <input type="file">
+                </label>
+                <h3>Date & Time</h3>
+                <section>
+                    <label>
+                        <span>Date input</span>
+                        <input type="date">
+                    </label>
+                    <label>
+                        <span>Time input</span>
+                        <input type="time">
+                    </label>
+                </section>
+                <h3>Range</h3>
+                <label>
+                    <span>Range</span>
+                    <input type="range" min="0" max="100">
+                </label>
+            </fieldset>
+        </form>
+        
+    </article>
+    <article>
+        <form>
+            <fieldset>
+                <h2>Select box</h2>
+                <label><span>Option</span><select><option>Option 1</option><option>Option 2</option></select></label>
+                <h3>Checkboxes</h3>
+                <span>
+                    <label><input type="checkbox">This is a checkbox</label>
+                    <label><input type="checkbox" checked>This is a pre-selected checkbox</label>
+                </span>
+                <h3>Radio buttons</h3>
+                <span>
+                    <label><input type="radio" name="radio1">Exclusive choice 1</label>
+                    <label><input type="radio" name="radio1" checked>Exclusive choice 2</label>
+                </span>
 
-<div class=acc><div><input type="checkbox" id="code-footer" hidden><label class="color-default" for="code-footer">View source</label><div>
-<pre class="code" data-lang="HTML">&lt;footer&gt;
-    &lt;div&gt;nobloat/css&lt;/div&gt;
-    &lt;div&gt;&lt;a href=&quot;https://github.com/nobloat/css&quot;&gt;github.com/nobloat/css&lt;/a&gt;&lt;/div&gt;
-&lt;/footer&gt;</pre>
+                <h3>Vertical radio buttons</h3>
+                <span><label><input type="radio" name="radio2" checked >Another exclusive choice 1</label></span>
+                <span><label><input type="radio" name="radio2">Another exclusive choice 2</label></span>
+            </fieldset>
+        </form>
+        <h2>Example login-form</h2>
+        <form>
+            <fieldset>
+                <label class="stack"><span>@</span><input type="text"></label>
+                <label class="stack"><span>•••</span><input type="password"></label>
+            </fieldset>
+            <div class="stack"><button type="submit" class="stack ok">Login</button></div>
+        </form>
+    </article>
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-form" hidden><label class="color-default" for="html-form">View HTML</label><div>
+<pre><code class="html">&lt;h2&gt;Forms&lt;/h2&gt;
+&lt;article&gt;
+    &lt;form&gt;
+        &lt;fieldset&gt;
+            &lt;h3&gt;Text-Input&lt;/h3&gt;
+            &lt;label&gt;&lt;span&gt;E-Mail&lt;/span&gt;&lt;input type=&quot;email&quot; placeholder=&quot;test@example.org&quot;&gt;&lt;span&gt;After&lt;/span&gt;&lt;/label&gt;
+            &lt;label&gt;&lt;span&gt;Password&lt;/span&gt;&lt;input type=&quot;password&quot;&gt;&lt;/label&gt;
+            &lt;label&gt;&lt;span&gt;First name&lt;/span&gt;&lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
+            &lt;label&gt;&lt;input type=&quot;text&quot;&gt;&lt;span&gt;Last name&lt;/span&gt;&lt;/label&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;label&gt;&lt;span&gt;Street&lt;/span&gt;&lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
+                &lt;label&gt;&lt;input type=&quot;text&quot;&gt;&lt;span&gt;City&lt;/span&gt;&lt;/label&gt;
+            &lt;/div&gt; 
+            
+            &lt;span&gt;Simple text input&lt;/span&gt;
+            &lt;input type=&quot;text&quot; placeholder=&quot;Example text input&quot;&gt; 
+            &lt;span&gt;Text area&lt;/span&gt;
+            &lt;textarea&gt;&lt;/textarea&gt;
+        &lt;/fieldset&gt;
+        &lt;div&gt;
+            &lt;button type=&quot;submit&quot; class=&quot;ok&quot;&gt;Submit&lt;/button&gt;
+            &lt;button type=&quot;reset&quot; class=&quot;err&quot;&gt;Reset&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/article&gt;
+    &lt;article&gt;
+        &lt;form&gt;
+            &lt;fieldset&gt;
+                &lt;h2&gt;Special input fields&lt;/h2&gt;
+                &lt;h3&gt;File upload&lt;/h3&gt;
+                &lt;label&gt;
+                    &lt;span&gt;File upload&lt;/span&gt;
+                    &lt;input type=&quot;file&quot;&gt;
+                &lt;/label&gt;
+                &lt;h3&gt;Date &amp; Time&lt;/h3&gt;
+                &lt;section&gt;
+                    &lt;label&gt;
+                        &lt;span&gt;Date input&lt;/span&gt;
+                        &lt;input type=&quot;date&quot;&gt;
+                    &lt;/label&gt;
+                    &lt;label&gt;
+                        &lt;span&gt;Time input&lt;/span&gt;
+                        &lt;input type=&quot;time&quot;&gt;
+                    &lt;/label&gt;
+                &lt;/section&gt;
+                &lt;h3&gt;Range&lt;/h3&gt;
+                &lt;label&gt;
+                    &lt;span&gt;Range&lt;/span&gt;
+                    &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;
+                &lt;/label&gt;
+            &lt;/fieldset&gt;
+        &lt;/form&gt;
+        
+    &lt;/article&gt;
+    &lt;article&gt;
+        &lt;form&gt;
+            &lt;fieldset&gt;
+                &lt;h2&gt;Select box&lt;/h2&gt;
+                &lt;label&gt;&lt;span&gt;Option&lt;/span&gt;&lt;select&gt;&lt;option&gt;Option 1&lt;/option&gt;&lt;option&gt;Option 2&lt;/option&gt;&lt;/select&gt;&lt;/label&gt;
+                &lt;h3&gt;Checkboxes&lt;/h3&gt;
+                &lt;span&gt;
+                    &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;This is a checkbox&lt;/label&gt;
+                    &lt;label&gt;&lt;input type=&quot;checkbox&quot; checked&gt;This is a pre-selected checkbox&lt;/label&gt;
+                &lt;/span&gt;
+                &lt;h3&gt;Radio buttons&lt;/h3&gt;
+                &lt;span&gt;
+                    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;radio1&quot;&gt;Exclusive choice 1&lt;/label&gt;
+                    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;radio1&quot; checked&gt;Exclusive choice 2&lt;/label&gt;
+                &lt;/span&gt;
+
+                &lt;h3&gt;Vertical radio buttons&lt;/h3&gt;
+                &lt;span&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;radio2&quot; checked &gt;Another exclusive choice 1&lt;/label&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;radio2&quot;&gt;Another exclusive choice 2&lt;/label&gt;&lt;/span&gt;
+            &lt;/fieldset&gt;
+        &lt;/form&gt;
+        &lt;h2&gt;Example login-form&lt;/h2&gt;
+        &lt;form&gt;
+            &lt;fieldset&gt;
+                &lt;label class=&quot;stack&quot;&gt;&lt;span&gt;@&lt;/span&gt;&lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
+                &lt;label class=&quot;stack&quot;&gt;&lt;span&gt;•••&lt;/span&gt;&lt;input type=&quot;password&quot;&gt;&lt;/label&gt;
+            &lt;/fieldset&gt;
+            &lt;div class=&quot;stack&quot;&gt;&lt;button type=&quot;submit&quot; class=&quot;stack ok&quot;&gt;Login&lt;/button&gt;&lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/article&gt;</code></pre>
 </div></div></div>
+<div class=acc><div><input type="checkbox" id="css-form" hidden><label class="color-default" for="css-form">View CSS</label><div>
+<pre><code class="css">form,
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: flex;
+  flex-flow: column;
+}
+
+fieldset * {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.stack {
+  margin: 0;
+}
+
+button.stack {
+  width: 100%;
+  border-radius: 0;
+}
+
+textarea {
+  min-height: 6.5rem;
+}
+
+input:invalid {
+  border: 2px solid var(--c-err, var(--c-f1));
+}
+
+textarea,
+select,
+input:not([type=&quot;checkbox&quot;]):not([type=&quot;radio&quot;]) {
+  font-size: 80%;
+  flex: 4;
+  padding: .4rem 1rem;
+  color: var(--c-f1);
+  font-family: var(--font-family);
+  border: 2px solid transparent;
+  background-color: var(--c-b2);
+}
+
+input[type=&quot;checkbox&quot;],
+input[type=&quot;radio&quot;] {
+  margin-right: .5rem;
+  background-color: var(--c-b1);
+}
+
+fieldset &gt; label,
+fieldset &gt; section &gt; label,
+fieldset &gt; input:not([type=&quot;checkbox&quot;]):not([type=&quot;radio&quot;]),
+fieldset &gt; textarea,
+fieldset &gt; select {
+  margin-bottom: 1rem;
+  box-shadow: var(--sh);
+  width: 100%;
+}
+
+input:not([type=&quot;checkbox&quot;]):not([type=&quot;radio&quot;]):hover,
+textarea:hover,
+select:hover {
+  border: 2px solid var(--c-1, var(--c-f1));
+}
+
+input:not([type=&quot;checkbox&quot;]):not([type=&quot;radio&quot;]):focus,
+textarea:focus,
+select:focus {
+  border: 2px solid var(--c-2, var(--c-f1));
+}
+
+label &gt; span {
+  background-color: var(--c-b1);
+  padding: .4rem 1rem;
+  flex: 3 3 5;
+}
+
+fieldset &gt; span &gt; *:not(:last-child):not(:only-child) {
+  margin-right: 1rem;
+}</code></pre>
+</div></div></div></div>
+</article>
+
 </section>
 
+<section class="no-margin">
+<article>
+<h2 id="grids">Responsive Layouts</h2>
+<p>
+    We use the very great idea of <i>Heydon Pickering</i> called the <i><a href="https://heydonworks.com/article/the-flexbox-holy-albatross/">The Flexbox Holy Albatross Reincarnated</a></i>.
+</p>
+<p>
+    <ul>
+        <li>no <code>col-sm-1 col-lg-6 col-xl-12</code> madness</li>
+        <li>no media queries and arbitrary breakoints, which will never cover all device sizes</li>
+        <li>embracing flexbox</li>
+        <li>just use the <code>&lt;section&gt;</code> tag to get resonsiveness</li>
+        <li>configurable margin using <code>&lt;section style=&quot;--margin:2rem;&quot;&gt;&lt;/section&gt;</code></li>
+        <li>no <code>half fourth-1000</code> for unequal sized items, just use <code>flex-grow: 2;</code></li>
+        <li>To wrap items earlier, set the <code>--wrap-at</code> vraiable on the section</li>
+    </ul>
+</p>
+<p><span class="label wrg">Warning:</span> Don't wrap sections in sections, this will result in horizontal scroll bars on mobile devices</p>
+
+</article>
+</section>
+
+<section class="no-margin">
+    <div class="card" style="flex-grow: .5;">Half-sized card <code>flex-grow: .5;</code></div>
+    <div class="card">Card</div>
+    <div class="card">Card</div>
+    <div class="card" style="flex-grow: 2;">Double sized card <code>flex-grow: 2;</code></div>
+</section>
+
+<section class="no-margin" style="--margin: 2rem;">
+    <div class="card">Card margin: 2rem</div>
+    <div class="card">Card margin: 2rem</div>
+    <div class="card">Card margin: 2rem</div>
+    <div class="card">Card margin: 2rem</div>
+</section>
+<section class="no-margin" style="--margin:0;">
+    <div class="card">Card no margin</div>
+    <div class="card">Card no margin</div>
+    <div class="card">Card no margin</div>
+    <div class="card">Card no margin</div>
+</section>
+
+<section class="no-margin" style="--wrap-at:100rem;">
+    <div class="card">Card wraps at 100rem</div>
+    <div class="card">Card wraps at 100rem</div>
+    <div class="card">Card wraps at 100rem</div>
+    <div class="card">Card wraps at 100rem</div>
+</section><section class="no-margin" id="layout">
+
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-layout" hidden><label class="color-default" for="html-layout">View HTML</label><div>
+<pre><code class="html">&lt;section class=&quot;no-margin&quot;&gt;
+&lt;article&gt;
+&lt;h2 id=&quot;grids&quot;&gt;Responsive Layouts&lt;/h2&gt;
+&lt;p&gt;
+    We use the very great idea of &lt;i&gt;Heydon Pickering&lt;/i&gt; called the &lt;i&gt;&lt;a href=&quot;https://heydonworks.com/article/the-flexbox-holy-albatross/&quot;&gt;The Flexbox Holy Albatross Reincarnated&lt;/a&gt;&lt;/i&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;no &lt;code&gt;col-sm-1 col-lg-6 col-xl-12&lt;/code&gt; madness&lt;/li&gt;
+        &lt;li&gt;no media queries and arbitrary breakoints, which will never cover all device sizes&lt;/li&gt;
+        &lt;li&gt;embracing flexbox&lt;/li&gt;
+        &lt;li&gt;just use the &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; tag to get resonsiveness&lt;/li&gt;
+        &lt;li&gt;configurable margin using &lt;code&gt;&amp;lt;section style=&amp;quot;--margin:2rem;&amp;quot;&amp;gt;&amp;lt;/section&amp;gt;&lt;/code&gt;&lt;/li&gt;
+        &lt;li&gt;no &lt;code&gt;half fourth-1000&lt;/code&gt; for unequal sized items, just use &lt;code&gt;flex-grow: 2;&lt;/code&gt;&lt;/li&gt;
+        &lt;li&gt;To wrap items earlier, set the &lt;code&gt;--wrap-at&lt;/code&gt; vraiable on the section&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;label wrg&quot;&gt;Warning:&lt;/span&gt; Don&#39;t wrap sections in sections, this will result in horizontal scroll bars on mobile devices&lt;/p&gt;
+
+&lt;/article&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;no-margin&quot;&gt;
+    &lt;div class=&quot;card&quot; style=&quot;flex-grow: .5;&quot;&gt;Half-sized card &lt;code&gt;flex-grow: .5;&lt;/code&gt;&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Card&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Card&lt;/div&gt;
+    &lt;div class=&quot;card&quot; style=&quot;flex-grow: 2;&quot;&gt;Double sized card &lt;code&gt;flex-grow: 2;&lt;/code&gt;&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;no-margin&quot; style=&quot;--margin: 2rem;&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;Card margin: 2rem&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Card margin: 2rem&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Card margin: 2rem&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Card margin: 2rem&lt;/div&gt;
+&lt;/section&gt;
+&lt;section class=&quot;no-margin&quot; style=&quot;--margin:0;&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;Card no margin&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Card no margin&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Card no margin&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Card no margin&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;no-margin&quot; style=&quot;--wrap-at:100rem;&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;Card wraps at 100rem&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Card wraps at 100rem&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Card wraps at 100rem&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Card wraps at 100rem&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div></div></div>
+<div class=acc><div><input type="checkbox" id="css-layout" hidden><label class="color-default" for="css-layout">View CSS</label><div>
+<pre><code class="css">*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,body {
+  font-family: var(--font-family);
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+main {
+  background-color: var(--c-bg);
+  color: var(--c-f1);
+  padding: 5rem 3% 0 3%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  min-height: calc(100vh - var(--h-ftr));
+}
+
+main &gt; * {
+  width: 100%;
+}
+
+/* https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/ */
+section {
+  --multiplier: calc(var(--wrap-at, 50rem) - 100%); /*TODO: merge into flex-basis*/
+  
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(var(--margin, 1rem) * -1);
+}
+
+/* https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/ */
+section &gt; * {
+  max-width: 100%;
+  flex-grow: 1;
+  flex-basis: calc(var(--multiplier) * 999);
+  margin: var(--margin, 1rem);
+}
+
+:root {
+  --font-family: &quot;Helvetica&quot;, sans-serif;
+  --rad: .7rem;
+  --c-f1: #303742;
+  --c-f2: #303742;
+  --c-b1: #c2c2c2;
+  --c-b2: #c2c2c2;
+  --h-hdr: 5rem;
+  --h-ftr: 4rem;
+  --sh: 0 .25rem 1rem rgba(48, 55, 66, .15);
+}</code></pre>
+</div></div></div></div>
+</section>
+
+
+<section>
+<article id="helper">
+<h2>Helper</h2>
+<div class="row space-around">
+  <article>
+  <h3>.row</h3>
+  <p>Similar to <code>&lt;section&gt;</code> but is wrappable</p>
+  <div class="row">
+    <div class="card">A card</div>
+    <div class="card">Second card</div>
+  </div>
+</article>
+<article>
+  <h3>.col</h3>
+  <p>Same as <code>.row</code> but for columns. You can wrap rows in columns and vice versa.</p>
+  <div class="col">
+    <div class="card">A card</div>
+    <div class="card">Second card</div>
+  </div>
+</article>
+<article>
+  <h3>class="space-between"</h3>
+  <div class="row space-between">
+    <div class="card">A card</div>
+    <div class="card">Second card</div>
+  </div>
+</article>
+<article>
+  <h3>class="space-around"</h3>
+  <div class="row space-around">
+    <div class="card">A card</div>
+    <div class="card">Second card</div>
+  </div>
+</article>
+</div>
+<div class="row space-around">
+<div class=acc><div><input type="checkbox" id="html-helper" hidden><label class="color-default" for="html-helper">View HTML</label><div>
+<pre><code class="html">&lt;h2&gt;Helper&lt;/h2&gt;
+&lt;div class=&quot;row space-around&quot;&gt;
+  &lt;article&gt;
+  &lt;h3&gt;.row&lt;/h3&gt;
+  &lt;p&gt;Similar to &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; but is wrappable&lt;/p&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;A card&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Second card&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+&lt;article&gt;
+  &lt;h3&gt;.col&lt;/h3&gt;
+  &lt;p&gt;Same as &lt;code&gt;.row&lt;/code&gt; but for columns. You can wrap rows in columns and vice versa.&lt;/p&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;A card&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Second card&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+&lt;article&gt;
+  &lt;h3&gt;class=&quot;space-between&quot;&lt;/h3&gt;
+  &lt;div class=&quot;row space-between&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;A card&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Second card&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+&lt;article&gt;
+  &lt;h3&gt;class=&quot;space-around&quot;&lt;/h3&gt;
+  &lt;div class=&quot;row space-around&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;A card&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Second card&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+&lt;/div&gt;</code></pre>
+</div></div></div>
+<div class=acc><div><input type="checkbox" id="css-helper" hidden><label class="color-default" for="css-helper">View CSS</label><div>
+<pre><code class="css">.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.row &gt; * {
+  margin: .5rem;
+}
+
+.col {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.col &gt; * {
+  margin: .5rem;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.end {
+  align-items: flex-end;
+}
+
+.right {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-between;
+}</code></pre>
+</div></div></div></div>
+</article>
+</section>
 </main>
 <footer>
     <div>nobloat/css</div>
     <div><a href="https://github.com/nobloat/css">github.com/nobloat/css</a></div>
 </footer></body>
+
