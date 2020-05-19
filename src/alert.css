@@ -27,13 +27,13 @@
 
 .alert > label::before {
   content: "\2715";
-  margin-left: 0.5rem;
+  margin-left: .5rem;
 }
 
 .close {
   animation-name: dismiss;
   animation-delay: 5s;
-  animation-duration: 0.5s;
+  animation-duration: .5s;
   animation-fill-mode: forwards;
 }
 
@@ -47,7 +47,7 @@
 
 .alert input:checked ~ * {
   animation-name: dismiss;
-  animation-duration: 400ms;
+  animation-duration: .4s;
   animation-fill-mode: forwards;
 }
 

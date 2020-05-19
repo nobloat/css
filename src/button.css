@@ -5,36 +5,13 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 600;
-  padding: 0.7rem 1rem;
+  padding: .7rem 1rem;
   text-align: center;
-  margin: 0.15rem;
+  margin: .15rem;
   border: 2px solid transparent;
   box-shadow: var(--sh);
-}
-
-button > label {
-  margin: 0;
-  width: 100%;
-}
-
-button > * {
-  cursor: pointer;
 }
 
 button:hover {
   filter: brightness(120%);
-}
-
-span.button {
-  border-radius: var(--rad);
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 13.333px;
-  line-height: normal;
-  text-align: center;
-  margin: 0.15rem;
-  border: 2px solid transparent;
-  box-shadow: var(--sh);
-  padding: 0.7rem;
 }

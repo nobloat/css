@@ -14,11 +14,11 @@ body > header {
 
 /* Burger */
 header hr {
-  margin: 0.55rem;
+  margin: .55rem;
 }
 
 nav > * {
-  padding: 0 0.7rem;
+  padding: 0 .7rem;
 }
 
 body > header > * {
@@ -43,7 +43,7 @@ body > header > * {
   #nav-check:checked ~ nav {
     flex-flow: nowrap column;
     background-color: var(--c-b2);
-    transition: opacity 0.25s ease-out;
+    transition: opacity .25s ease-out;
     text-align: center;
     margin: 4.5rem -1rem;
     opacity: 1;
@@ -53,7 +53,7 @@ body > header > * {
   }
 
   #nav-check:checked ~ nav > * {
-    padding: 0.5rem 3rem;
+    padding: .5rem 3rem;
   }
 
   #nav-check:not(:checked) ~ nav {

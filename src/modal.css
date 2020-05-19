@@ -5,7 +5,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(160, 160, 160, 0.843);
+  background-color: rgba(160, 160, 160, .843);
   z-index: 10;
 }
 
@@ -24,5 +24,22 @@
 
 .modal > input:first-child:checked ~ .overlay {
   display: flex;
-  transition: opacity 0.2s ease-in;
+  transition: opacity .2s ease-in;
+}
+
+span.button {
+  border-radius: var(--rad);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: .7rem 1rem;
+  font-size: .87rem;
+  text-align: center;
+  margin: .15rem;
+  border: 2px solid transparent;
+  box-shadow: var(--sh);
+}
+
+span.button:hover {
+  filter: brightness(120%);
 }

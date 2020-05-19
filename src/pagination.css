@@ -5,7 +5,7 @@ ul.pages {
 }
 
 ul.pages > li {
-  padding: 0.5rem;
+  padding: .5rem;
 }
 
 ul.pages > li.active {

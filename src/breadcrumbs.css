@@ -5,9 +5,9 @@ ul.bread {
 }
 
 ul.bread > li {
-  padding: 0.2rem;
+  padding: .2rem;
   font-size: 1rem;
-  padding-top: 0.5rem;
+  padding-top: .5rem;
   text-align: right;
   float: right;
   filter: contrast(70%);

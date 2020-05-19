@@ -1,5 +1,4 @@
 .code {
-
   color: var(--c);
   position: relative;
   margin: 1rem;
@@ -11,8 +10,8 @@
   font-size: 1.15rem;
   position: absolute;
   font-weight: bold;
-  right: 0.4rem;
-  top: 0.1rem;
+  right: .4rem;
+  top: .1rem;
 }
 
 .code > code {
