@@ -10,7 +10,11 @@
 .acc > div > label {
   display: flex;
   justify-content: space-between;
+<<<<<<< HEAD
   padding: 1rem;
+=======
+  padding: .5rem;
+>>>>>>> feature/doc
   cursor: pointer;
 }
 
@@ -38,7 +42,10 @@
 }
 
 .acc > div > input:checked ~ div {
+<<<<<<< HEAD
   padding: 1rem;
+=======
+>>>>>>> feature/doc
   border: 2px solid var(--c-b1);
   border-radius: 0 0 var(--rad) var(--rad);
 }

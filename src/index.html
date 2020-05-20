@@ -1,126 +1,183 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="src/style.css">
-    <!-- no favicon -->
-    <link rel="shortcut icon" href="#" />
-    <title>nobloat/css</title>   
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="src/style.css">
+  <!-- no favicon -->
+  <link rel="shortcut icon" href="#" />
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <title>nobloat/css</title>
+  <style>
+    section {
+      max-width: 75rem;
+      --margin: 2rem;
+    }
+
+    section:not(.no-margin) {
+      margin-bottom: 6rem;
+    }
+
+    .row {
+      padding-top: 2rem;
+    }
+  </style>
 </head>
+
 <body>
-<!-- Dark/Light theme switch -->
-<input id="dark-mode" class="dark-mode-checkbox" type="checkbox" hidden>
-<!--include:nav.html-->
-<!--include:toast.html-->
-<main>
-    
-<section>
-    <article>
-        <h1 id="typography">Typography</h1>
+  <!-- Dark/Light theme switch -->
+  <input id="dark-mode" class="dark-mode-checkbox" type="checkbox" hidden>
+  <!--include:nav.html-->
+  <!--include:toast.html-->
+  <main>
+
+    <section>
+      <article id="typography">
         <!--include:typography.html-->
         <!--code:typography.html-->
-    </article>
-    <article>
+      </article>
+    </section>
+
+    <section>
+      <article id="nav">
+        <h2>Navigation</h2>
+        <p>The Navigation menu/header is responsive and supports menus.
+          By default it wraps at <code>60rem</code>.
+        </p>
+        <!--code:nav.html-->
+      </article>
+    </section>
+    <section>
+      <article id="code">
         <!--include:code.html-->
         <!--code:code.html-->
+      </article>
+      <article id="breadcrumbs">
+        <!--include:breadcrumbs.html-->
+        <!--code:breadcrumbs.html-->
+      </article>
+    </section>
 
+<<<<<<< HEAD
         <!--include:kbd.html-->
         <!--code:kbd.html-->
 
+=======
+    <section>
+      <article id="kbd">
+        <!--include:kbd.html-->
+        <!--code:kbd.html-->
+      </article>
+      <article id="pagination">
+>>>>>>> feature/doc
         <!--include:pagination.html-->
         <!--code:pagination.html-->
-
-        <!--include:breadcrumbs.html-->
-        <!--code:breadcrumbs.html-->
-    </article>
-</section>
-<section>
-    <article>
-        <!--include:button.html-->
-        <!--code:button.html-->
-    </article>
-    
-    <article>
-        <!--include:badge.html-->
-        <!--code:badge.html-->
-    </article>
-    <article>
+      </article>
+    </section>
+    <section>
+      <article id="label">
         <!--include:label.html-->
         <!--code:label.html-->
-    </article>
-    <article>
+      </article>
+      <article id="badge">
+        <!--include:badge.html-->
+        <!--code:badge.html-->
+      </article>
+      <article id="button">
+        <!--include:button.html-->
+        <!--code:button.html-->
+      </article>
+    </section>
+    <section>
+      <article id="spinner">
         <!--include:spinner.html-->
         <!--code:spinner.html-->
-    </article>
-    <article>
+      </article>
+    </section>
+    <section>
+      <article id="tooltip">
+          <!--include:tooltip.html-->
+          <!--code:tooltip.html-->
+      </article>
+      <article id="dark">
+          <!--include:dark.html-->
+          <!--code:dark.html-->
+      </article> 
+    </section>
+    <section>
+      <article id="alert">
         <!--include:alert.html-->
         <!--code:alert.html-->
-    </article>
-    <article>
-        <article>
-            <h2>Toasts</h2>
-            <p>They appear at the bottom right and close automatically</p>
-            <!--code:toast.html-->
-        </article>
-        <article>
-            <!--include:modal.html-->
-            <!--code:modal.html-->
-        </article>   
-    </article>
-    
-</section>
-<section>
-    <article>
-        <!--include:tooltip.html-->
-        <!--code:tooltip.html-->
-    </article>
-    <article>
-        <!--include:dark.html-->
-        <!--code:dark.html-->
-    </article> 
-</section>
-
-<section>
-    <article>
-    <!--include:accordion.html-->
-    <!--code:accordion.html-->
-    </article>
-    <article>
-    <!--include:tab.html-->
-    <!--code:tab.html-->
-    </article>
-</section>
-
-<h2 id="tables">Tables</h2>
-<article>
-    <section>
-<!--include:table.html-->
+      </article>
     </section>
-    
-    
-<!--code:table.html-->
-    
-    
-    
-</article>
 
-<section>
-    <article>
-        <!--include:card.html-->
-        </article>
-</section>
-<section>
-    <article>
-        <!--code:card.html-->
+    <section>
+      <article id="toasts">
+          <h2>Toasts</h2>
+          <p>They appear in a specified corner using one of the classes <code>right bottom</code>, <code>right top</code>, <code>left bottom</code> or <code>left top</code>.</p>
+          <p>Usage of the optional classes <code>close in-10</code> will autoclose the toast.</p>
+
+          <!--code:toast.html-->
+      </article>
+    </section>
+    <section>
+      <article id="modal">
+          <!--include:modal.html-->
+          <!--code:modal.html-->
+      </article>   
+    </section>
+    <section>
+      <article id="accordion">
+      <!--include:accordion.html-->
+      <!--code:accordion.html-->
+      </article>
+    </section>
+    <section>
+      <article id="tab">
+      <!--include:tab.html-->
+      <!--code:tab.html-->
+      </article>
+  </section>
+  <section>
+    <article id="table">
+      <!--include:table.html-->
+      <!--code:table.html-->
     </article>
-</section>
+  </section>
+  <section>
+    <article id="card">
+      <!--include:card.html-->
+      <!--code:card.html-->
+    </article>
+  </section>
 
-<section>
-    <h2>Footer</h2>
-    <!--code:footer.html-->
-</section>
+  <section>
+    <article id="form">
+    <!--include:form.html-->
+    <!--code:form.html-->
+    </article>
+    
+  </section>
+  
+  <!--include:layout.html-->
+  <section class="no-margin" id="layout">
+    <!--code:layout.html-->
+  </section>
+  
 
-</main>
-<!--include:footer.html-->
+  <section>
+    <article id="helper">
+      <!--include:helper.html-->
+      <!--code:helper.html-->
+    </article>
+  </section>
+  </main>
+  <!--include:footer.html-->
 </body>
+
+</html>

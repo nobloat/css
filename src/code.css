@@ -1,7 +1,11 @@
 .code {
   color: var(--c);
   position: relative;
-  margin: 1rem;
+  font-size: .75rem;
+}
+
+pre {
+  font-size: .8rem;
 }
 
 .code::before {

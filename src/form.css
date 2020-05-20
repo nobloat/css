@@ -9,7 +9,7 @@ fieldset {
 
 fieldset * {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row;
   justify-content: flex-start;
 }
 
@@ -49,7 +49,7 @@ input[type="radio"] {
 }
 
 fieldset > label,
-fieldset > section > label,
+fieldset > div > label,
 fieldset > input:not([type="checkbox"]):not([type="radio"]),
 fieldset > textarea,
 fieldset > select {

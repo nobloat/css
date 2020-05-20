@@ -6,7 +6,6 @@ table > tfoot > * {
 table {
   margin-bottom: 3rem;
   border-spacing: 0;
-  width: 100%;
   border-radius: var(--rad);
   box-shadow: var(--sh);
 }

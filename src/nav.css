@@ -5,7 +5,7 @@ body > header {
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  max-height: 5rem;
+  max-height: var(--h-hdr, 5rem);
   background: linear-gradient(0deg, var(--c-b2) 3%, var(--c-b1) 100%);
   font-size: 1.5rem;
   z-index: 3;
