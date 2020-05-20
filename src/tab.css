@@ -5,13 +5,6 @@
 
 .tab > div:first-child {
   display: flex;
-<<<<<<< HEAD
-  flex-flow: row nowrap;
-}
-
-.tab label {
-  padding: .75rem 1.5rem;
-=======
   flex-flow: row wrap;
 }
 
@@ -22,7 +15,6 @@
 
 .tab label {
   padding: .5rem 2rem;
->>>>>>> feature/doc
   border-radius: var(--rad) var(--rad) 0 0;
   cursor: pointer;
 }
@@ -48,10 +40,6 @@
   border: .1rem solid var(--c-b1);
   padding: 1rem;
   opacity: 1;
-<<<<<<< HEAD
-  border-radius: 0 var(--rad) var(--rad) var(--rad);
-=======
   border-radius: 0 0 var(--rad) var(--rad);
   box-shadow: var(--sh);
->>>>>>> feature/doc
 }

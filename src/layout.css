@@ -43,24 +43,6 @@ section > * {
   margin: var(--margin, 1rem);
 }
 
-<<<<<<< HEAD
-.row {
-  display: flex;
-}
-
-.col {
-  display: flex;
-  flex-flow: column;
-}
-
-.right {
-  display: flex;
-  flex-flow: row-reverse;
-  justify-content: space-between;
-}
-
-=======
->>>>>>> feature/doc
 :root {
   --font-family: "Helvetica", sans-serif;
   --rad: .7rem;
@@ -68,10 +50,7 @@ section > * {
   --c-f2: #303742;
   --c-b1: #c2c2c2;
   --c-b2: #c2c2c2;
-<<<<<<< HEAD
-=======
   --h-hdr: 5rem;
   --h-ftr: 4rem;
->>>>>>> feature/doc
   --sh: 0 .25rem 1rem rgba(48, 55, 66, .15);
 }
