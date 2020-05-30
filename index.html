@@ -14,7 +14,8 @@
       target.innerHTML += `<div class="src row space-around"><details><summary class="color-default">View HTML</summary><div><pre><code></code></pre></div</details></div>`;
           target.querySelector(".src code").innerText = r;
           fetch("src/"+component+".css").then(r => r.text()).then(r => {
-            target.querySelector(".src").innerHTML += `<details><summary class="color-default">View CSS</summary><div><pre><code></code></pre></div</details>`;
+            let bytes = (new TextEncoder().encode(r)).length;
+            target.querySelector(".src").innerHTML += `<details><summary class="color-default">View CSS (${bytes} Byte)</summary><div><pre><code></code></pre></div</details>`;
             target.querySelectorAll(".src code")[1].innerText = r;
           });
     }
@@ -73,17 +74,14 @@
       max-width: 75rem;
       --margin: 2rem;
     }
-
     section:not(.no-margin) {
       margin-bottom: 6rem;
     }
-
     .row {
       padding-top: 2rem;
     }
   </style>
 </head>
-
 <body>
   <!-- Dark/Light theme switch -->
   <input id="dark-mode" class="dark-mode-checkbox" type="checkbox" hidden>
@@ -180,5 +178,4 @@
 
   </main>
 </body>
-
 </html>
