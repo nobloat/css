@@ -1,28 +1,30 @@
-# nobloat/css
-
 **THIS IS WORK IN PROGRESS**
 
-Minimalistic modular pure CSS3 components
+# nobloat/css
+
+Minimalistic modular pure CSS3 components - definitely no framework
+
+> Don't grab the whole thing, just pick what you actually need. It is not a framework, rather a collection of manuals how to implement popular components with pure CSS3.
 
 ## Goals
 
-- A stylesheet I can use for my own projects
+- Components that I can use for my own projects
 - **No requirement for npm, less, sass, webpack or similar**
-- Uses CSS3 features instead
-- No JavaScript required
+- No dependencies, except for an editor and a web-browser
+- Use CSS3 features in favor of JavaScript
+- Use flexbox instead of the typical beak-point based grid-system
 - Small footprint (~10kb uncompressed unminified)
-- Modular: only use what you need
-- Avoid classes and verbosity where possible e.g.
-  - `<div class="nav menu">` is `<nav>`
-  - `<div class="container"> is`<main>`
-  - `<a class="button button-small>` is `<button>`
-- Fun to use
-- Use examples over pre-defined CSS classes
+- **Modular: only grab what you need**
+- Avoid classes and verbosity e.g.
+  - `<div class="nav menu">` is just `<nav>`
+  - `<div class="container"> is` just <main>`
+  - `<a class="button button-small>` is just `<button>`
 - Customizable Colors
 - Learn HTML5 and CSS3
 
 ## Non-goals
 
+- Being a CSS "framework"
 - Stable "API" (class-names, tags)
 - Working on all browser out there (especially IE < 11)
 
@@ -49,7 +51,9 @@ Per default, all available components are includeded in [](style.css)
 
 ### Include/Exclude Components
 
-- Simply add/remove `@import` statements in [style.css](src/style.css)
+Just copy/paste the css parts you actually want to your stylesheet, or
+
+- Add/remove `@import` statements in [style.css](src/style.css)
 - Run `make`
 - Grab the resulting `nobloat.min.css` file
 
@@ -74,6 +78,5 @@ Per default, all available components are includeded in [](style.css)
 
 ## Known Issues
 - Modal not optimized for mobile
-- Edge: Closed alerts leave a very small line (probably some border)
-- Closed alerts consume space
+- Closed alerts consume space, on Edge they leave a very small line
 - Forms do not work in the grid, they are bigger -> Horizontal Scrollbar
