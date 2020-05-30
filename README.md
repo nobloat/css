@@ -11,7 +11,7 @@ Minimalistic modular pure CSS3 components - definitely no framework
 - Components that I can use for my own projects
 - **No requirement for node, npm, less, sass, webpack, rollup, ...**
 - Use CSS3 features in favor of JavaScript
-- Use flexbox instead of the typical beak-point based grid-system
+- Use flexbox instead of the typical break-point based grid-system
 - Small footprint (~10kb uncompressed unminified)
 - **Modular: only grab what you need**
 - Avoid classes and verbosity e.g.
