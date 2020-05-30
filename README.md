@@ -2,7 +2,7 @@
 
 # nobloat/css
 
-Minimalistic modular pure CSS3 components - definitely no framework
+Minimalistic modular pure CSS3 components - not a framework.
 
 > Don't grab the whole thing, just pick what you actually need. It is not a framework, rather a collection of manuals how to implement popular components with pure CSS3.
 
@@ -45,7 +45,6 @@ Minimalistic modular pure CSS3 components - definitely no framework
 Per default, all available components are includeded in [](style.css)
 
 ### Colors
-
 - Modify `--c-1` and `--c-2` in [color.css](src/color.css) and [dark.css](src/dark.css)
 
 ### Include/Exclude Components
@@ -57,7 +56,6 @@ Just copy/paste the css parts you actually want to your stylesheet, or
 - Grab the resulting `nobloat.min.css` file
 
 ## Inspirations
-
 - https://github.com/franciscop/picnic
 - https://github.com/milligram/milligram
 - https://github.com/pure-css/pure-css.github.io/
