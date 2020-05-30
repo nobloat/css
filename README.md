@@ -9,15 +9,14 @@ Minimalistic modular pure CSS3 components - definitely no framework
 ## Goals
 
 - Components that I can use for my own projects
-- **No requirement for npm, less, sass, webpack or similar**
-- No dependencies, except for an editor and a web-browser
+- **No requirement for node, npm, less, sass, webpack, rollup, ...**
 - Use CSS3 features in favor of JavaScript
 - Use flexbox instead of the typical beak-point based grid-system
 - Small footprint (~10kb uncompressed unminified)
 - **Modular: only grab what you need**
 - Avoid classes and verbosity e.g.
   - `<div class="nav menu">` is just `<nav>`
-  - `<div class="container"> is` just <main>`
+  - `<div class="container"> is` just `<main>`
   - `<a class="button button-small>` is just `<button>`
 - Customizable Colors
 - Learn HTML5 and CSS3
@@ -30,9 +29,9 @@ Minimalistic modular pure CSS3 components - definitely no framework
 
 ## Dependencies
 
-- None for development
-- Production builds require `make`, `sed`, `tr` which should be available in most distributions by default
-- **No npm, sass, less, webpack**
+- A text-editor and a web-browser
+- "Bundled builds" builds require `make`, `sed` and `tr` which should be available in most distributions by default
+- **No node, npm, sass, less, webpack, rollup, ...**
 
 ## Usage
 
