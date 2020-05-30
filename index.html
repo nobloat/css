@@ -11,7 +11,6 @@
       if (r == null) {
         r = await fetch("src/"+component+".html").then(r => r.text());
       }
-
       target.innerHTML += `<div class="src row space-around"><details><summary class="color-default">View HTML</summary><div><pre><code></code></pre></div</details></div>`;
           target.querySelector(".src code").innerText = r;
           fetch("src/"+component+".css").then(r => r.text()).then(r => {
@@ -29,6 +28,12 @@
         }
       });
     }
+
+    async function nodeFromFetch(component) {
+      let html = await fetch("src/"+component+".html").then(r => r.text());
+      return document.createRange().createContextualFragment(html);
+    }
+
     document.addEventListener("DOMContentLoaded", (event) => {
       [
         "typography", "code", "breadcrumbs", "kbd", 
@@ -40,7 +45,25 @@
 
         ["toast", "layout", "nav", "footer"].forEach(e => loadSource(e, document.getElementById(e)));
 
-        
+        nodeFromFetch("nav").then(r => {
+          let node = document.getElementById("dark-mode");
+          node.parentNode.insertBefore(r, node);
+        });
+
+        nodeFromFetch("layout").then(r => {
+          let node = document.getElementById("layout");
+          node.parentNode.insertBefore(r, node);
+        });
+
+        nodeFromFetch("toast").then(r => {
+          let node = document.querySelector("main");
+          node.parentNode.insertBefore(r, node);
+        });
+
+        nodeFromFetch("footer").then(r => {
+          let node = document.querySelector("main");
+          node.parentNode.appendChild(r, node);
+        });
     });
   </script>
 
@@ -64,15 +87,11 @@
 <body>
   <!-- Dark/Light theme switch -->
   <input id="dark-mode" class="dark-mode-checkbox" type="checkbox" hidden>
-  
-  <!--include:toast.html-->
   <main>
-
     <section>
       <article id="typography">
       </article>
     </section>
-
     <section>
       <article id="nav">
         <h2>Navigation</h2>
@@ -87,7 +106,6 @@
       <article id="breadcrumbs">
       </article>
     </section>
-
     <section>
       <article id="kbd">
       </article>
@@ -116,7 +134,6 @@
       <article id="alert">
       </article>
     </section>
-
     <section>
       <article id="toast">
           <h2>Toasts</h2>
@@ -148,17 +165,12 @@
     <article id="form">
     </article>
   </section>
-  
-  <!--include:layout.html-->
   <section class="no-margin" id="layout">
   </section>
-  
-
   <section>
     <article id="helper">
     </article>
   </section>
-
   <section>
     <article id="footer">
       <h2>Footer</h2>
@@ -167,7 +179,6 @@
   </section>
 
   </main>
-  <!--include:footer.html-->
 </body>
 
 </html>
