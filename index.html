@@ -9,10 +9,6 @@
 <!-- no favicon -->
 <link rel="shortcut icon" href="#" />
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
 <title>nobloat/css</title>
 <style>
 section {
@@ -122,7 +118,7 @@ est Lorem ipsum dolor sit amet.</p>
     </blockquote>
 </article>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-typography" hidden><label class="color-default" for="html-typography">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;article&gt;
     &lt;h2 id=&quot;typography&quot;&gt;Typography&lt;/h2&gt;
     &lt;div class=&quot;row space-between end&quot;&gt;
@@ -157,8 +153,8 @@ est Lorem ipsum dolor sit amet.&lt;/p&gt;
         &lt;/div&gt;
     &lt;/blockquote&gt;
 &lt;/article&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-typography" hidden><label class="color-default" for="css-typography">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">h1 {
   font-size: 3rem;
 }
@@ -220,7 +216,7 @@ hr {
   padding-top: .5rem;
   filter: contrast(70%);
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 </section>
 
@@ -232,7 +228,7 @@ By default it wraps at <code>60rem</code>.
 </p>
 
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-nav" hidden><label class="color-default" for="html-nav">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;header&gt;
     &lt;a href=&quot;#&quot;&gt;nobloat/css&lt;/a&gt;
     &lt;label class=&quot;nav-button&quot; for=&quot;nav-check&quot;&gt;
@@ -272,8 +268,8 @@ By default it wraps at <code>60rem</code>.
             &lt;a href=&quot;#helper&quot;&gt;Helper&lt;/a&gt;
     &lt;/nav&gt;
 &lt;/header&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-nav" hidden><label class="color-default" for="css-nav">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">body &gt; header {
   display: flex;
   flex-flow: row;
@@ -339,7 +335,7 @@ body &gt; header &gt; * {
     opacity: 0;
   }
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 </section>
 <section>
@@ -354,7 +350,7 @@ func main() {
 }
 </code></pre>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-code" hidden><label class="color-default" for="html-code">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2&gt;Code&lt;/h2&gt;
 &lt;pre data-lang=&quot;Go&quot; class=&quot;code&quot;&gt;
 &lt;code&gt;package main
@@ -364,8 +360,8 @@ func main() {
     fmt.Println(&quot;hello world&quot;)
 }
 &lt;/code&gt;&lt;/pre&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-code" hidden><label class="color-default" for="css-code">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">.code {
   color: var(--c);
   position: relative;
@@ -396,7 +392,7 @@ pre {
   border: 2px solid var(--c-b1);
   border-radius: var(--rad);
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 <article id="breadcrumbs">
 <h2>Bread crumbs</h2>
@@ -408,7 +404,7 @@ pre {
     </li>
 </ul>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-breadcrumbs" hidden><label class="color-default" for="html-breadcrumbs">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2&gt;Bread crumbs&lt;/h2&gt;
 &lt;ul class=&quot;bread&quot;&gt;
     &lt;li&gt;&lt;a&gt;Main Section&lt;/a&gt;&lt;/li&gt;
@@ -417,8 +413,8 @@ pre {
         &lt;a&gt;Active Section&lt;/a&gt;
     &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-breadcrumbs" hidden><label class="color-default" for="css-breadcrumbs">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">ul.bread {
   display: flex;
   flex-flow: row nowrap;
@@ -442,7 +438,7 @@ ul.bread &gt; li:not(.active) &gt; a {
 ul.bread &gt; :not(:last-child)::after {
   content: &quot; / &quot;;
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 </section>
 
@@ -456,15 +452,15 @@ ul.bread &gt; :not(:last-child)::after {
 </div>
 
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-kbd" hidden><label class="color-default" for="html-kbd">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2&gt;Kbd&lt;/h2&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;kbd&gt;Ctrl+S&lt;/kbd&gt;
   &lt;kbd&gt;Ctrl+C&lt;/kbd&gt;
   &lt;kbd&gt;Ctrl+V&lt;/kbd&gt;
 &lt;/div&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-kbd" hidden><label class="color-default" for="css-kbd">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">kbd {
   background-color: var(--c-b1);
   font-size: 1.2rem;
@@ -475,7 +471,7 @@ ul.bread &gt; :not(:last-child)::after {
   box-shadow: 4px 3px 7px 0 #777;
   cursor: pointer;
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 <article id="pagination">
 <h2>Pagination</h2>
@@ -488,7 +484,7 @@ ul.bread &gt; :not(:last-child)::after {
     <li><a>Next</a></li>
 </ul>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-pagination" hidden><label class="color-default" for="html-pagination">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2&gt;Pagination&lt;/h2&gt;
 &lt;ul class=&quot;pages&quot;&gt;
     &lt;li&gt;&lt;a&gt;Prev&lt;/a&gt;&lt;/li&gt;
@@ -498,8 +494,8 @@ ul.bread &gt; :not(:last-child)::after {
     &lt;li&gt;&lt;a&gt;99&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a&gt;Next&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-pagination" hidden><label class="color-default" for="css-pagination">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">ul.pages {
   display: flex;
   list-style: none;
@@ -526,7 +522,7 @@ ul.pages &gt; li.active &gt; a {
 ul.pages &gt; li.disabled {
   color: var(--c-f1);
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 </section>
 <section>
@@ -539,7 +535,7 @@ ul.pages &gt; li.disabled {
 <span class="label ok">This is a ok label</span>
 <span class="label wrg">This is a warninig label</span>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-label" hidden><label class="color-default" for="html-label">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2 id=&quot;labels&quot;&gt;Labels&lt;/h2&gt;
 &lt;span class=&quot;label&quot;&gt;This is a default label&lt;/span&gt;
 &lt;span class=&quot;label color-1&quot;&gt;This is a colored label&lt;/span&gt;
@@ -547,8 +543,8 @@ ul.pages &gt; li.disabled {
 &lt;span class=&quot;label err&quot;&gt;This is an err label&lt;/span&gt;
 &lt;span class=&quot;label ok&quot;&gt;This is a ok label&lt;/span&gt;
 &lt;span class=&quot;label wrg&quot;&gt;This is a warninig label&lt;/span&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-label" hidden><label class="color-default" for="css-label">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">.label {
   background-color: var(--c-b1);
   font-size: .8rem;
@@ -557,7 +553,7 @@ ul.pages &gt; li.disabled {
   padding: .4rem .6rem;
   border-radius: var(--rad);
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 <article id="badge">
 <h2 id="badges">Badges</h2>
@@ -573,7 +569,7 @@ ul.pages &gt; li.disabled {
   </span>
 </div>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-badge" hidden><label class="color-default" for="html-badge">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2 id=&quot;badges&quot;&gt;Badges&lt;/h2&gt;
 &lt;div&gt;
   &lt;button&gt;Button&lt;/button&gt;
@@ -586,8 +582,8 @@ ul.pages &gt; li.disabled {
   &lt;span class=&quot;badge err&quot; data-badge=&quot;3&quot;&gt;
   &lt;/span&gt;
 &lt;/div&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-badge" hidden><label class="color-default" for="css-badge">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">.badge {
   position: relative;
   white-space: nowrap;
@@ -613,7 +609,7 @@ ul.pages &gt; li.disabled {
   background-color: inherit;
   z-index: 2;
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 <article id="button">
 <h2 id="buttons">Buttons</h2>
@@ -624,7 +620,7 @@ ul.pages &gt; li.disabled {
 <button class="wrg">wrg Button</button>
 <button class="err">err Button</button>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-button" hidden><label class="color-default" for="html-button">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2 id=&quot;buttons&quot;&gt;Buttons&lt;/h2&gt;
 &lt;button&gt;Default Button&lt;/button&gt;
 &lt;button class=&quot;color-1&quot;&gt;Color 1 Button&lt;/button&gt;
@@ -632,8 +628,8 @@ ul.pages &gt; li.disabled {
 &lt;button class=&quot;ok&quot;&gt;ok Button&lt;/button&gt;
 &lt;button class=&quot;wrg&quot;&gt;wrg Button&lt;/button&gt;
 &lt;button class=&quot;err&quot;&gt;err Button&lt;/button&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-button" hidden><label class="color-default" for="css-button">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">button {
   border-radius: var(--rad);
   background-color: var(--c-b1);
@@ -651,7 +647,7 @@ ul.pages &gt; li.disabled {
 button:hover {
   filter: brightness(120%);
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 </section>
 <section>
@@ -695,7 +691,7 @@ button:hover {
 
 
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-spinner" hidden><label class="color-default" for="html-spinner">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2 id=&quot;spinners&quot;&gt;Spinners&lt;/h2&gt;
 &lt;div class=&quot;row space-between&quot;&gt;
   &lt;article&gt;
@@ -731,8 +727,8 @@ button:hover {
   &lt;span class=&quot;spinner large err&quot;&gt;&lt;/span&gt;
   &lt;/article&gt;
 &lt;/div&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-spinner" hidden><label class="color-default" for="css-spinner">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">span.spinner {
   display: inline-block;
   width: 1rem;
@@ -763,7 +759,7 @@ button:hover {
     transform: rotate(360deg);
   }
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 </section>
 <section>
@@ -794,7 +790,7 @@ button:hover {
     </div>
 </div>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-tooltip" hidden><label class="color-default" for="html-tooltip">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2 id=&quot;tooltips&quot;&gt;Tooltips&lt;/h2&gt;
 &lt;div class=&quot;row space-between&quot;&gt;
     &lt;div&gt;
@@ -820,8 +816,8 @@ button:hover {
         &lt;/button&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-tooltip" hidden><label class="color-default" for="css-tooltip">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">[data-tooltip] {
   position: relative;
 }
@@ -901,7 +897,7 @@ button:hover {
 [data-tooltip]:hover::before {
   opacity: 1;
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 <article id="dark">
 <h2 id="dark-mode">Dark mode</h2>
@@ -916,7 +912,7 @@ Needs to be placed directly in the body tag
 </p>
 
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-dark" hidden><label class="color-default" for="html-dark">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2 id=&quot;dark-mode&quot;&gt;Dark mode&lt;/h2&gt;
 &lt;!-- 
 Needs to be placed directly in the body tag
@@ -927,8 +923,8 @@ Needs to be placed directly in the body tag
         &lt;label class=&quot;dark-mode-label&quot; for=&quot;dark-mode&quot;&gt; mode&lt;/label&gt;
     &lt;/span&gt;
 &lt;/p&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-dark" hidden><label class="color-default" for="css-dark">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">.dark-mode-checkbox:checked ~ * {
   --c-b2: #303742;
   --c-b1: #66758c;
@@ -952,7 +948,7 @@ Needs to be placed directly in the body tag
 .dark-mode-checkbox:checked ~ * .dark-mode-label::before {
   content: &quot;\2611  Dark&quot;;
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 </section>
 <section>
@@ -990,7 +986,7 @@ Needs to be placed directly in the body tag
     <span>Important Mesasge with secondary color</span>
 </div>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-alert" hidden><label class="color-default" for="html-alert">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2 id=&quot;alerts&quot;&gt;Alerts&lt;/h2&gt;
 &lt;div class=&quot;alert&quot;&gt;
     &lt;input type=&quot;checkbox&quot; id=&quot;alert1&quot;/&gt;
@@ -1023,8 +1019,8 @@ Needs to be placed directly in the body tag
     &lt;label for=&quot;alert6&quot;&gt;&lt;!----&gt;&lt;/label&gt;
     &lt;span&gt;Important Mesasge with secondary color&lt;/span&gt;
 &lt;/div&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-alert" hidden><label class="color-default" for="css-alert">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">.alert {
   width: 100%;
   background-color: var(--c-b1);
@@ -1088,7 +1084,7 @@ Needs to be placed directly in the body tag
     display: none;
   }
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 </section>
 
@@ -1100,7 +1096,7 @@ Needs to be placed directly in the body tag
 
 
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-toast" hidden><label class="color-default" for="html-toast">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;!--This should be placed at the start of the document--&gt;
 &lt;div class=&quot;toasts right bottom&quot;&gt;
     &lt;div class=&quot;alert ok close&quot;&gt;
@@ -1114,8 +1110,8 @@ Needs to be placed directly in the body tag
         &lt;span&gt;This is a warning autoclosable Toast after 10 seconds&lt;/span&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-toast" hidden><label class="color-default" for="css-toast">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">div.toasts {
   position: fixed;
   display: flex;
@@ -1148,7 +1144,7 @@ div.toasts &gt; * {
 .toasts &gt; .alert {
   box-shadow: 10px 18px 41px -5px rgba(0, 0, 0, .75);
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 </section>
 <section>
@@ -1179,7 +1175,7 @@ div.toasts &gt; * {
     </div>
 </div>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-modal" hidden><label class="color-default" for="html-modal">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html"> &lt;h2 id=&quot;modals&quot;&gt;Modals&lt;/h2&gt;
  &lt;p&gt;
     &lt;label for=&quot;modal-1&quot;&gt;
@@ -1205,8 +1201,8 @@ div.toasts &gt; * {
         &lt;/div&gt;    
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-modal" hidden><label class="color-default" for="css-modal">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">.modal &gt; .overlay {
   display: none;
   position: fixed;
@@ -1252,207 +1248,155 @@ span.button {
 span.button:hover {
   filter: brightness(120%);
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 </section>
 <section>
 <article id="accordion">
 <h2 id="accordion">Accordion</h2>
 
-<p>If you need mutual exclusive accordions, just swap 
-  <code>type="checkbox"</code> with 
-  <code>type="radio" name="somename"</code>.
+<p>For accordions standard <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> can be used.
 </p>
 
-<div class="acc">
-    <div>
-      <input type="checkbox" id="acc1" hidden>
-      <label class="err" for="acc1">Item 1</label>
-      <div>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+<details>
+  <summary class="err">Item 1</summary>
+  <div>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
         invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
         accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
         sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
         sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
         aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
         Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-      </div>
-    </div>
-    <div>
-      <input type="checkbox" id="acc2" hidden>
-      <label class="ok" for="acc2">Item 2</label>
-      <div>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+  </div>
+</details>
+<details>
+  <summary class="ok">Item 2</summary>
+  <div>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
         invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
         accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
         sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
         sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
         aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
         Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-      </div>
-    </div>
-  <div>
-    <input type="checkbox" id="acc3" hidden>
-    <label class="color-default" for="acc3">Item 3</label>
-    <div>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-      invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-      accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-      sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-      sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-      aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    </div>
   </div>
+</details>
+<details>
+  <summary class="color-default">Item 3</summary>
   <div>
-    <input type="checkbox" id="acc4" hidden>
-    <label class="color-1" for="acc4">Item 4</label>
-    <div>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-      invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-      accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-      sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-      sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-      aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    </div>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
+        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
+        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
   </div>
+</details>
+<details>
+  <summary class="color-1">Item 4</summary>
   <div>
-    <input type="checkbox" id="acc5" hidden>
-    <label class="color-2" for="acc5">Item 5</label>
-    <div>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-      invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-      accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-      sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-      sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-      aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    </div>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
+        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
+        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
   </div>
-</div>
+</details>
+<details>
+  <summary class="color-2">Item 5</summary>
+  <div>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
+        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
+        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+  </div>
+</details>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-accordion" hidden><label class="color-default" for="html-accordion">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2 id=&quot;accordion&quot;&gt;Accordion&lt;/h2&gt;
 
-&lt;p&gt;If you need mutual exclusive accordions, just swap 
-  &lt;code&gt;type=&quot;checkbox&quot;&lt;/code&gt; with 
-  &lt;code&gt;type=&quot;radio&quot; name=&quot;somename&quot;&lt;/code&gt;.
+&lt;p&gt;For accordions standard &lt;code&gt;&amp;lt;details&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;summary&amp;gt;&lt;/code&gt; can be used.
 &lt;/p&gt;
 
-&lt;div class=&quot;acc&quot;&gt;
-    &lt;div&gt;
-      &lt;input type=&quot;checkbox&quot; id=&quot;acc1&quot; hidden&gt;
-      &lt;label class=&quot;err&quot; for=&quot;acc1&quot;&gt;Item 1&lt;/label&gt;
-      &lt;div&gt;
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+&lt;details&gt;
+  &lt;summary class=&quot;err&quot;&gt;Item 1&lt;/summary&gt;
+  &lt;div&gt;
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
         invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
         accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
         sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
         sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
         aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
         Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;input type=&quot;checkbox&quot; id=&quot;acc2&quot; hidden&gt;
-      &lt;label class=&quot;ok&quot; for=&quot;acc2&quot;&gt;Item 2&lt;/label&gt;
-      &lt;div&gt;
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;ok&quot;&gt;Item 2&lt;/summary&gt;
+  &lt;div&gt;
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
         invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
         accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
         sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
         sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
         aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
         Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;div&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;acc3&quot; hidden&gt;
-    &lt;label class=&quot;color-default&quot; for=&quot;acc3&quot;&gt;Item 3&lt;/label&gt;
-    &lt;div&gt;
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-      invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-      accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-      sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-      sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-      aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    &lt;/div&gt;
   &lt;/div&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;color-default&quot;&gt;Item 3&lt;/summary&gt;
   &lt;div&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;acc4&quot; hidden&gt;
-    &lt;label class=&quot;color-1&quot; for=&quot;acc4&quot;&gt;Item 4&lt;/label&gt;
-    &lt;div&gt;
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-      invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-      accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-      sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-      sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-      aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    &lt;/div&gt;
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
+        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
+        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
   &lt;/div&gt;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;color-1&quot;&gt;Item 4&lt;/summary&gt;
   &lt;div&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;acc5&quot; hidden&gt;
-    &lt;label class=&quot;color-2&quot; for=&quot;acc5&quot;&gt;Item 5&lt;/label&gt;
-    &lt;div&gt;
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-      invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
-      accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-      sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-      sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-      aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    &lt;/div&gt;
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
+        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
+        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-accordion" hidden><label class="color-default" for="css-accordion">View CSS</label><div>
-<pre><code class="css">.acc {
-  border-radius: var(--rad);
-  overflow: hidden;
-}
-
-.acc &gt; div {
-  overflow: hidden;
-}
-
-.acc &gt; div &gt; label {
-  display: flex;
-  justify-content: space-between;
+&lt;/details&gt;
+&lt;details&gt;
+  &lt;summary class=&quot;color-2&quot;&gt;Item 5&lt;/summary&gt;
+  &lt;div&gt;
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
+        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
+        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+  &lt;/div&gt;
+&lt;/details&gt;</code></pre>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
+<pre><code class="css">summary {
   padding: .5rem;
-  cursor: pointer;
+  border-radius: var(--rad) var(--rad) 0 0;
 }
 
-.acc &gt; div &gt; label::after {
-  content: &quot;\276F&quot;;
-  width: 1rem;
-  height: 1rem;
-  text-align: center;
-  transform: rotate(90deg);
-  transition: all .35s;
-}
-
-.acc &gt; div &gt; div {
-  max-height: 0;
-  transition: all .35s;
-  overflow: auto;
-}
-
-.acc &gt; div &gt; input:checked + label::after {
-  transform: rotate(-90deg);
-}
-
-.acc &gt; div &gt; input:checked ~ * {
-  max-height: 100vh;
-}
-
-.acc &gt; div &gt; input:checked ~ div {
+details &gt; :not(summary) {
   border: 2px solid var(--c-b1);
   border-radius: 0 0 var(--rad) var(--rad);
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 </section>
 <section>
@@ -1545,7 +1489,7 @@ span.button:hover {
   </div>
 </div>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-tab" hidden><label class="color-default" for="html-tab">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2 id=&quot;tabs&quot;&gt;Tabs&lt;/h2&gt;
 &lt;p&gt;
   &lt;span class=&quot;label wrg&quot;&gt;Warning&lt;/span&gt;
@@ -1633,8 +1577,8 @@ span.button:hover {
     magna aliquyam erat, sed diam voluptua.
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-tab" hidden><label class="color-default" for="css-tab">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">.tab {
   display: flex;
   flex-flow: column;
@@ -1680,7 +1624,7 @@ span.button:hover {
   border-radius: 0 0 var(--rad) var(--rad);
   box-shadow: var(--sh);
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 </section>
 <section>
@@ -1797,7 +1741,7 @@ span.button:hover {
 </article>
 </div>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-table" hidden><label class="color-default" for="html-table">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2&gt;Tables&lt;/h2&gt;      
 &lt;div class=&quot;row space-around&quot;&gt;
 &lt;article&gt;
@@ -1909,8 +1853,8 @@ span.button:hover {
 &lt;/table&gt;
 &lt;/article&gt;
 &lt;/div&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-table" hidden><label class="color-default" for="css-table">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">table &gt; thead &gt; *,
 table &gt; tfoot &gt; * {
   text-align: center;
@@ -1959,7 +1903,7 @@ td:last-child,
 th:last-child {
   padding-right: 2rem;
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 </section>
 <section>
@@ -2010,7 +1954,7 @@ th:last-child {
     </div>
 </div>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-card" hidden><label class="color-default" for="html-card">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2&gt;Cards&lt;/h2&gt;
 &lt;div class=&quot;row space-around&quot;&gt;
     &lt;div class=&quot;card&quot;&gt;
@@ -2056,8 +2000,8 @@ th:last-child {
         &lt;/span&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-card" hidden><label class="color-default" for="css-card">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">.card {
   border: 2px solid var(--c-f1);
   display: flex;
@@ -2072,7 +2016,7 @@ th:last-child {
   font-size: 1.5rem;
   padding-bottom: .5rem;
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 </section>
 
@@ -2163,7 +2107,7 @@ th:last-child {
         </form>
     </article>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-form" hidden><label class="color-default" for="html-form">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2&gt;Forms&lt;/h2&gt;
 &lt;article&gt;
     &lt;form&gt;
@@ -2248,8 +2192,8 @@ th:last-child {
             &lt;div class=&quot;stack&quot;&gt;&lt;button type=&quot;submit&quot; class=&quot;stack ok&quot;&gt;Login&lt;/button&gt;&lt;/div&gt;
         &lt;/form&gt;
     &lt;/article&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-form" hidden><label class="color-default" for="css-form">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">form,
 fieldset {
   padding: 0;
@@ -2261,7 +2205,7 @@ fieldset {
 
 fieldset * {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row;
   justify-content: flex-start;
 }
 
@@ -2301,7 +2245,7 @@ input[type=&quot;radio&quot;] {
 }
 
 fieldset &gt; label,
-fieldset &gt; section &gt; label,
+fieldset &gt; div &gt; label,
 fieldset &gt; input:not([type=&quot;checkbox&quot;]):not([type=&quot;radio&quot;]),
 fieldset &gt; textarea,
 fieldset &gt; select {
@@ -2331,7 +2275,7 @@ label &gt; span {
 fieldset &gt; span &gt; *:not(:last-child):not(:only-child) {
   margin-right: 1rem;
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 
 </section>
@@ -2386,7 +2330,7 @@ fieldset &gt; span &gt; *:not(:last-child):not(:only-child) {
 </section><section class="no-margin" id="layout">
 
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-layout" hidden><label class="color-default" for="html-layout">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;section class=&quot;no-margin&quot;&gt;
 &lt;article&gt;
 &lt;h2 id=&quot;grids&quot;&gt;Responsive Layouts&lt;/h2&gt;
@@ -2435,15 +2379,16 @@ fieldset &gt; span &gt; *:not(:last-child):not(:only-child) {
     &lt;div class=&quot;card&quot;&gt;Card wraps at 100rem&lt;/div&gt;
     &lt;div class=&quot;card&quot;&gt;Card wraps at 100rem&lt;/div&gt;
 &lt;/section&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-layout" hidden><label class="color-default" for="css-layout">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">*,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-html,body {
+html,
+body {
   font-family: var(--font-family);
   margin: 0;
   font-size: 1.1rem;
@@ -2467,8 +2412,8 @@ main &gt; * {
 
 /* https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/ */
 section {
-  --multiplier: calc(var(--wrap-at, 50rem) - 100%); /*TODO: merge into flex-basis*/
-  
+  --multiplier: calc(var(--wrap-at, 50rem) - 100%);
+
   display: flex;
   flex-wrap: wrap;
   margin: 0 calc(var(--margin, 1rem) * -1);
@@ -2493,7 +2438,7 @@ section &gt; * {
   --h-ftr: 4rem;
   --sh: 0 .25rem 1rem rgba(48, 55, 66, .15);
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </section>
 
 
@@ -2533,7 +2478,7 @@ section &gt; * {
 </article>
 </div>
 <div class="row space-around">
-<div class=acc><div><input type="checkbox" id="html-helper" hidden><label class="color-default" for="html-helper">View HTML</label><div>
+<details><summary class="color-default">View HTML</summary><div>
 <pre><code class="html">&lt;h2&gt;Helper&lt;/h2&gt;
 &lt;div class=&quot;row space-around&quot;&gt;
   &lt;article&gt;
@@ -2567,8 +2512,8 @@ section &gt; * {
   &lt;/div&gt;
 &lt;/article&gt;
 &lt;/div&gt;</code></pre>
-</div></div></div>
-<div class=acc><div><input type="checkbox" id="css-helper" hidden><label class="color-default" for="css-helper">View CSS</label><div>
+</div></details>
+<details><summary class="color-default">View CSS</summary><div>
 <pre><code class="css">.row {
   display: flex;
   flex-flow: row wrap;
@@ -2613,7 +2558,7 @@ section &gt; * {
   flex-flow: row-reverse;
   justify-content: space-between;
 }</code></pre>
-</div></div></div></div>
+</div></details>
 </article>
 </section>
 </main>

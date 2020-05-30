@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html,body {
+html,
+body {
   font-family: var(--font-family);
   margin: 0;
   font-size: 1.1rem;
@@ -28,8 +29,8 @@ main > * {
 
 /* https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/ */
 section {
-  --multiplier: calc(var(--wrap-at, 50rem) - 100%); /*TODO: merge into flex-basis*/
-  
+  --multiplier: calc(var(--wrap-at, 50rem) - 100%);
+
   display: flex;
   flex-wrap: wrap;
   margin: 0 calc(var(--margin, 1rem) * -1);
