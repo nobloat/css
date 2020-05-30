@@ -2,12 +2,9 @@ INCLUDED_FILES=$(shell cat src/style.css | sed -E ':a; s%(.*)/\*.*\*/%\1%; ta; /
 
 all: check nobloat.min.css
 
-check: index.html
+check:
 	stylelint src/*.css
 	html-validator --verbose --file index.html
-
-index.html: src/*.html
-	bash build.sh
 
 nobloat.min.css: nobloat.css
 	@cat $< \
@@ -31,15 +28,15 @@ compress: nobloat.css nobloat.min.css
 report: compress
 	@echo ""
 	@echo "--- Individual components ---"
-	@du -b $(INCLUDED_FILES) | sort -n
+	@wc -c $(INCLUDED_FILES) | sort -n
 	
 	@echo ""
 	@echo "---------- Packed -----------"
-	@du -b nobloat.css nobloat.min.css
+	@wc -c nobloat.min.css
 
 	@echo ""
 	@echo "-------- Compressed --------"
-	@du -b *.zst *.br
+	@wc -c *.zst *.br
 
 clean: 
 	@rm -f nobloat.css

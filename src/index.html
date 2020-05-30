@@ -8,6 +8,15 @@
   <!-- no favicon -->
   <link rel="shortcut icon" href="#" />
 
+  <script>
+    function loadComponent(component) {
+      fetch(component+".html").then(r => r.text()).then(r => document.getElementById(component).innerHTML = r)
+    }
+
+    loadInto("typography.html", "typography");
+    
+  </script>
+
   <title>nobloat/css</title>
   <style>
     section {
