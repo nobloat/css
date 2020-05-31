@@ -1,0 +1,15 @@
+FROM alpine:latest as ruler-dev
+RUN apk add --no-cache make 
+RUN apk add --no-cache brotli 
+RUN apk add --no-cache zstd
+RUN apk add --no-cache npm 
+RUN npm install -g stylelint stylelint-config-standard
+RUN npm install -g html-validator-cli
+RUN mkdir /app
+WORKDIR /app
+COPY . /app
+RUN make 
+RUN make report
+
+FROM scratch
+COPY --from=ruler-dev /app/nobloat.min.css /nobloat.min.css.br
