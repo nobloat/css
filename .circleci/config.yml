@@ -8,4 +8,7 @@ jobs:
       - checkout
       - run: |
           apk add docker-cli jq
-          sh ruler.sh
+          sh ruler.sh | tee ruler.txt
+      - store_artifacts:
+          path: ruler.txt
+          destination: ruler.txt
