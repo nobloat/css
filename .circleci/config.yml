@@ -7,5 +7,5 @@ jobs:
       - setup_remote_docker
       - checkout
       - run: |
-          apk add docker-cli
+          apk add docker-cli jq
           sh ruler.sh
