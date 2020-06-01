@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: alpine:latest
     steps:
-      - setup-remote_docker
+      - setup_remote_docker
       - checkout
       - run: |
           apk add docker-cli
