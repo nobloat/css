@@ -22,7 +22,7 @@
 
     /* This is just for loading the sections from partials */
     function loadComponent(component, target, withSource = true) {
-      fetch("src/"+component+".html").then(r => r.text()).then(r => {
+      fetch("example/"+component+".html").then(r => r.text()).then(r => {
         target.innerHTML = r;
         if (withSource) {
           loadSource(component, target, r);
@@ -31,7 +31,7 @@
     }
 
     async function nodeFromFetch(component) {
-      let html = await fetch("src/"+component+".html").then(r => r.text());
+      let html = await fetch("example/"+component+".html").then(r => r.text());
       return document.createRange().createContextualFragment(html);
     }
 

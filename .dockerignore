@@ -2,3 +2,5 @@ nobloat.css
 *.min.css
 *.br
 *.zst
+ruler.sh
+ruler.txt
