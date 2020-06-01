@@ -1,0 +1,9 @@
+version: 2.1
+jobs:
+  build:
+    image: alpine:latest
+    steps:
+      - setup-remote_docker
+      - checkout
+      - run: |
+          sh ruler.sh
